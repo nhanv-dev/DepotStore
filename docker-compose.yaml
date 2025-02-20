@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  # React
+  react-app:
+    container_name: react-app
+    image: react-app
+    restart: unless-stopped
+    build: 
+      context: ./spring-client
+      dockerfile: ./Dockerfile
+    ports:
+      - '3001:3000'
+    expose:
+      - 3001
+    networks: 
+      front-net:
+        ipv4_address: 192.168.0.128  
+      # back-net:
+    env_file:
+      - ./spring-client/.env
+    environment:
+      REACT_APP_SPRING_URL: 'http://localhost:8088/api'
+  # Spring boot
+  springboot-app:
+    container_name: springboot-app
+    image: springboot-app
+    restart: unless-stopped
+    build: 
+      context: ./spring-server
+      dockerfile: ./Dockerfile 
+    ports:
+      - 8088:8080
+    expose:
+      - 8088
+    networks:
+      back-net:
+        aliases:
+          - web.local  
+      front-net:  
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: admin
+    depends_on:
+      - mysqldb
+  # MySQL 8
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    restart: unless-stopped
+    volumes:
+      - mysql-volume:/var/lib/mysql
+    ports:
+    
+      - 3307:3306
+    expose:
+      - 3307
+    networks:  
+      - back-net
+    environment:
+      MYSQL_DATABASE: ecommerce
+      MYSQL_ROOT_PASSWORD: admin
+volumes:
+  mysql-volume:
+    external: true
+networks:
+  front-net:
+    driver: bridge
+    name: front-net 
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24 
+          ip_range: 192.168.0.0/26
+          gateway: 192.168.0.62
+  back-net:
+    driver: bridge
+    name: back-net
+    ipam:
+      config:
+        - subnet: 172.29.0.0/16 
+          # gateway: 172.29.0.1
+ 
