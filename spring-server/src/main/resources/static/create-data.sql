@@ -379,7 +379,24 @@ values (1, 'ROLE_USER'),
 # ========================================== ADMIN_ACCOUNT ==========================================
 insert into depot_store.users(id, email, name, password, phone_number)
 values (1, 'tthanhnhan1512@gmail.com', 'Trần Thanh Nhân','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
+insert into depot_store.users(id, email, name, password, phone_number)
+values (2, 'user1@gmail.com', 'Anonymouse 1','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
+insert into depot_store.users(id, email, name, password, phone_number)
+values (3, 'user2@gmail.com', 'Anonymouse 2','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
+insert into depot_store.users(id, email, name, password, phone_number)
+values (4, 'user3@gmail.com', 'Anonymouse 3','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
+insert into depot_store.users(id, email, name, password, phone_number)
+values (5, 'user4@gmail.com', 'Anonymouse 4','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
+insert into depot_store.users(id, email, name, password, phone_number)
+values (6, 'user5@gmail.com', 'Anonymouse 5','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
+
+
 insert depot_store.user_role(user_id, role_id) values (1, 3);
+insert depot_store.user_role(user_id, role_id) values (2, 1);
+insert depot_store.user_role(user_id, role_id) values (3, 1);
+insert depot_store.user_role(user_id, role_id) values (4, 1);
+insert depot_store.user_role(user_id, role_id) values (5, 1);
+insert depot_store.user_role(user_id, role_id) values (6, 1);
 
 # ========================================== ORDER_STATUS ==========================================
 insert into depot_store.orders_status (id, status, title, description, label_confirm, label_created_at)

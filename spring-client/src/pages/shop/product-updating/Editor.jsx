@@ -1,8 +1,8 @@
-import {CKEditor} from '@ckeditor/ckeditor5-react';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from "@mui/styles";
 
-function Editor({value, setValue}) {
+function Editor({ value, setValue }) {
     const useStyles = makeStyles((theme) => ({
         richTextEditor: {
             "& .ck-editor__main > .ck-editor__editable": {
