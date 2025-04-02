@@ -1,14 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import Layout from "../../../components/shop/layout";
-import Helmet from "../../../components/common/helmet";
-import {protectedRequest, publicRequest} from "../../../util/request-method";
-import StatusStepper from "./StatusStepper";
-import ToastCustom from "../../../components/common/toast-custom";
-import {UilArrowLeft, UilArrowRight, UilBan} from "@iconscout/react-unicons";
+import { UilArrowLeft, UilBan } from "@iconscout/react-unicons";
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ImageNotFound from "../../../assets/images/image-not-found.jpg";
-import {Link, useNavigate, useParams} from "react-router-dom";
-import {formatCurrency} from "../../../util/format";
-import {Loader} from "../../../router/Router";
+import Helmet from "../../../components/common/helmet";
+import ToastCustom from "../../../components/common/toast-custom";
+import Layout from "../../../components/shop/layout";
+import { Loader } from "../../../router/Router";
+import { formatCurrency } from "../../../util/format";
+import { protectedRequest, publicRequest } from "../../../util/request-method";
+import StatusStepper from "./StatusStepper";
 
 function Order() {
     const {id} = useParams();

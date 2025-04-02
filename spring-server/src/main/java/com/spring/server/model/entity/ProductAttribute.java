@@ -15,7 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "attribute")
-@SQLDelete(sql = "UPDATE attribute SET is_deleted = true WHERE id=?")
+@SQLDelete(sql = "UPDATE attribute SET is_deleted = 1 WHERE id=?")
 public class ProductAttribute extends BaseEntity implements Serializable {
     @Column
     private String name;

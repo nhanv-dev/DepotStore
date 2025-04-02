@@ -1,37 +1,37 @@
 # ========================================== CATEGORY ==========================================
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (1, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/55/5b/80/48cbaafe144c25d5065786ecace86d38.png.webp', 'thoi-trang-nu', 'Thời Trang Nữ');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (2, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/00/5d/97/384ca1a678c4ee93a0886a204f47645d.png.webp', 'thoi-trang-nam', 'Thời Trang Nam');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (3, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/61/d4/ea/e6ea3ffc1fcde3b6224d2bb691ea16a2.png.webp', 'nha-cua', 'Nhà Cửa');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (4, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/73/0e/89/d7ca146de7198a6808580239e381a0c8.png.webp', 'suc-khoe-lam-dep', 'Sức Khỏe & Làm Đẹp');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (5, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/d6/7f/6c/5d53b60efb9448b6a1609c825c29fa40.png.webp', 'giay-dep', 'Giày Dép');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (6, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/31/a7/94/6524d2ecbec216816d91b6066452e3f2.png.webp', 'tui-xach', 'Túi Xách');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (7, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/8b/d4/a8/5924758b5c36f3b1c43b6843f52d6dd2.png.webp', 'dong-ho', 'Đồng Hồ');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (8, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/ca/53/64/49c6189a0e1c1bf7cb91b01ff6d3fe43.png.webp', 'phu-kien-thoi-trang', 'Phụ Kiện Thời Trang');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (9, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/f6/22/46/7e2185d2cf1bca72d5aeac385a865b2b.png.webp', 'tan-trang-nha-cua', 'Tân Trang Nhà Cửa');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (10, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/f6/22/46/7e2185d2cf1bca72d5aeac385a865b2b.png.webp', 'doi-song', 'Đời sống');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (11, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/3c/e4/99/eeee1801c838468d94af9997ec2bbe42.png.webp', 'dich-vu-tien-ich', 'Dịch Vụ Tiện Ích');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (12, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/75/34/29/d900f845e51e95a2c41b5b035468f959.png.webp', 'phu-kien-cong-nghe', 'Phụ kiện công nghệ');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (13, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/69/f5/36/c6cd9e2849854630ed74ff1678db8f19.png.webp', 'o-to-xe-may', 'Ô tô - Xe máy');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (14, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/3c/e4/99/eeee1801c838468d94af9997ec2bbe42.png.webp', 'thiet-bi-y-te', 'Thiết bị y tế');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (15, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/13/64/43/226301adcc7660ffcf44a61bb6df99b7.png.webp', 'me-va-be', 'Mẹ và bé');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (16, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/13/64/43/226301adcc7660ffcf44a61bb6df99b7.png.webp', 'thoi-trang-tre-em', 'Thời Trang Trẻ Em');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (17, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/40/0f/9b/62a58fd19f540c70fce804e2a9bb5b2d.png.webp', 'bach-hoa-tong-hop', 'Bách Hóa Tổng Hợp');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (18, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/f6/22/46/7e2185d2cf1bca72d5aeac385a865b2b.png.webp', 'thuc-pham-tuoi-song', 'Thực Phẩm Tươi Sống');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (19, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/61/d4/ea/e6ea3ffc1fcde3b6224d2bb691ea16a2.png.webp', 'do-dien-gia-dung', 'Đồ điện gia dụng');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (20, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png.webp', 'dien-thoai-may-tinh-bang', 'Điện thoại - Máy tính bảng');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (21, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png.webp', 'tivi-thiet-bi-giai-tri', 'Tivi - Thiết bị giải trí');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (22, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/2d/7c/45/e4976f3fa4061ab310c11d2a1b759e5b.png.webp', 'may-anh-may-quay-phim', 'Máy ảnh - Máy quay phim');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (23, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/75/34/29/d900f845e51e95a2c41b5b035468f959.png.webp', 'thiet-bi-am-thanh', 'Thiết bị âm thanh');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (24, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/0b/5e/3d/00941c9eb338ea62a47d5b1e042843d8.png.webp', 'the-thao-da-ngoai-giai-tri', 'Thể thao - Dã ngoại - Giải trí');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (25, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/ed/20/60/afa9b3b474bf7ad70f10dd6443211d5f.png.webp', 'sach-van-phong-pham', 'Sách & Văn phòng phẩm');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (26, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/upload/cb/64/f7/0ebb0ae297f052e34a8161c9bf8efb96.png.webp', 'vat-pham-phong-thuy', 'Vật phẩm phong thủy');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (27, '2023-05-12 01:47:30', '2023-05-12 23:46:26', 'https://salt.tikicdn.com/cache/100x100/ts/category/13/64/43/226301adcc7660ffcf44a61bb6df99b7.png.webp', 'cham-soc-thu-cung', 'Chăm sóc thú cưng');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (28, '2023-05-12 01:47:30', '2023-05-12 23:46:27', 'https://salt.tikicdn.com/cache/100x100/ts/category/8b/d4/a8/5924758b5c36f3b1c43b6843f52d6dd2.png.webp', 'trang-suc', 'Trang sức');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (29, '2023-05-12 01:47:30', '2023-05-12 23:46:27', 'https://salt.tikicdn.com/cache/100x100/ts/category/c8/82/d4/64c561c4ced585c74b9c292208e4995a.png.webp', 'dien-may', 'Điện máy');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (30, '2023-05-12 01:47:30', '2023-05-12 23:46:27', 'https://salt.tikicdn.com/cache/100x100/ts/category/13/64/43/226301adcc7660ffcf44a61bb6df99b7.png.webp', 'do-choi', 'Đồ chơi');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (31, '2023-05-12 01:47:30', '2023-05-12 23:46:27', 'https://salt.tikicdn.com/cache/100x100/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png.webp', 'laptop-may-tinh-thiet-bi-van-phong', 'Laptop, Máy tính & Thiết bị văn phòng');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (32, '2023-05-12 01:47:30', '2023-05-12 23:46:27', 'https://salt.tikicdn.com/cache/100x100/ts/category/0a/c9/7b/8e466bdf6d4a5f5e14665ce56e58631d.png.webp', 've-may-bay-du-lich', 'Vé máy bay - Du lịch');
-INSERT INTO depot_store.category (id, created_at, updated_at, icon, slug, title) VALUES (33, '2023-05-12 01:47:30', '2023-05-12 23:46:27', 'https://salt.tikicdn.com/cache/100x100/ts/category/0a/c9/7b/8e466bdf6d4a5f5e14665ce56e58631d.png.webp', 'voucher-dich-vu', 'Voucher dịch vụ');
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("1","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/thoi-trang-nu.webp","thoi-trang-nu","Thời Trang Nữ");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("2","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/thoi-trang-nam.webp","thoi-trang-nam","Thời Trang Nam");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("3","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/nha-cua.webp","nha-cua","Nhà Cửa");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("4","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/suc-khoe-lam-dep.webp","suc-khoe-lam-dep","Sức Khỏe & Làm Đẹp");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("5","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/giay-dep.webp","giay-dep","Giày Dép");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("6","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/tui-xach.webp","tui-xach","Túi Xách");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("7","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/dong-ho.webp","dong-ho","Đồng Hồ");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("8","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/phu-kien-thoi-trang.webp","phu-kien-thoi-trang","Phụ Kiện Thời Trang");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("9","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/tan-trang-nha-cua.webp","tan-trang-nha-cua","Tân Trang Nhà Cửa");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("10","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/doi-song.webp","doi-song","Đời sống");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("11","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/dich-vu-tien-ich.webp","dich-vu-tien-ich","Dịch Vụ Tiện Ích");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("12","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/phu-kien-cong-nghe.webp","phu-kien-cong-nghe","Phụ kiện công nghệ");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("13","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/o-to-xe-may.webp","o-to-xe-may","Ô tô - Xe máy");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("14","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/thiet-bi-y-te.webp","thiet-bi-y-te","Thiết bị y tế");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("15","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/me-va-be.webp","me-va-be","Mẹ và bé");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("16","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/thoi-trang-tre-em.webp","thoi-trang-tre-em","Thời Trang Trẻ Em");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("17","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/bach-hoa-tong-hop.webp","bach-hoa-tong-hop","Bách Hóa Tổng Hợp");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("18","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/thuc-pham-tuoi-song.webp","thuc-pham-tuoi-song","Thực Phẩm Tươi Sống");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("19","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/do-dien-gia-dung.webp","do-dien-gia-dung","Đồ điện gia dụng");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("20","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/dien-thoai-may-tinh-bang.webp","dien-thoai-may-tinh-bang","Điện thoại - Máy tính bảng");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("21","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/tivi-thiet-bi-giai-tri.webp","tivi-thiet-bi-giai-tri","Tivi - Thiết bị giải trí");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("22","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/may-anh-may-quay-phim.webp","may-anh-may-quay-phim","Máy ảnh - Máy quay phim");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("23","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/thiet-bi-am-thanh.webp","thiet-bi-am-thanh","Thiết bị âm thanh");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("24","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/the-thao-da-ngoai-giai-tri.webp","the-thao-da-ngoai-giai-tri","Thể thao - Dã ngoại - Giải trí");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("25","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/sach-van-phong-pham.webp","sach-van-phong-pham","Sách & Văn phòng phẩm");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("26","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/vat-pham-phong-thuy.webp","vat-pham-phong-thuy","Vật phẩm phong thủy");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("27","2023-05-12 01:47:30.000000","2023-05-12 23:46:26.000000","public/category/cham-soc-thu-cung.webp","cham-soc-thu-cung","Chăm sóc thú cưng");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("28","2023-05-12 01:47:30.000000","2023-05-12 23:46:27.000000","public/category/trang-suc.webp","trang-suc","Trang sức");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("29","2023-05-12 01:47:30.000000","2023-05-12 23:46:27.000000","public/category/dien-may.webp","dien-may","Điện máy");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("30","2023-05-12 01:47:30.000000","2023-05-12 23:46:27.000000","public/category/do-choi.webp","do-choi","Đồ chơi");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("31","2023-05-12 01:47:30.000000","2023-05-12 23:46:27.000000","public/category/laptop-may-tinh-thiet-bi-van-phong.webp","laptop-may-tinh-thiet-bi-van-phong","Laptop, Máy tính & Thiết bị văn phòng");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("32","2023-05-12 01:47:30.000000","2023-05-12 23:46:27.000000","public/category/ve-may-bay-du-lich.webp","ve-may-bay-du-lich","Vé máy bay - Du lịch");
+INSERT INTO category (id, created_at, updated_at, icon, slug, title) VALUES("33","2023-05-12 01:47:30.000000","2023-05-12 23:46:27.000000","public/category/voucher-dich-vu.webp","voucher-dich-vu","Voucher dịch vụ");
 
 # ========================================== SUB_CATEGORY ==========================================
 INSERT INTO depot_store.sub_category (id, created_at, updated_at, icon, slug, title, category_id) VALUES (1, '2023-05-21 22:23:43', '2023-05-21 22:23:49', null, 'dam-vay', 'Đầm, váy', 1);
@@ -360,57 +360,237 @@ INSERT INTO depot_store.sub_category (id, created_at, updated_at, icon, slug, ti
 INSERT INTO depot_store.sub_category (id, created_at, updated_at, icon, slug, title, category_id) VALUES (324, '2023-05-21 22:23:43', '2023-05-21 22:23:49', null, 'dich-vu-giup-viec-sua-chua', 'Dịch vụ giúp việc - Sửa chữa', 33);
 INSERT INTO depot_store.sub_category (id, created_at, updated_at, icon, slug, title, category_id) VALUES (325, '2023-05-21 22:23:43', '2023-05-21 22:23:49', null, 'dich-vu-qua-tang', 'Dịch vụ quà tặng', 33);
 
-
-# ========================================== RETURN_POLICY ==========================================
-insert into depot_store.return_policy(id, title, tooltip_title, tooltip_content)
-values (1, 'Miễn phí hoàn trả', 'Miễn phí hoàn trả',
-        'Depot bảo vệ quyền lợi khách hàng hoàn trả sản phẩm miễn phí nếu lỗi của Shop (sản phẩm kém chất lượng, bị lỗi kỹ thuật, hư hỏng không sử dụng được, bể vỡ, không đúng mô tả, hoặc không đúng như đơn đặt hàng).'),
-       (2, '48 giờ hoàn trả', 'Chính sách hoàn trả của Depot',
-        'Trả hàng hoàn tiền trong vòng 48 giờ cho các sản phẩm bị lỗi kỹ thuật, bể vỡ, không đúng mô tả hoặc không đúng như đơn đặt hàng.'),
-       (3, 'Bảo hành theo chính sách từ Nhà bán hàng', 'Bảo hành theo chính sách từ Nhà bán hàng',
-        'Depot sẽ xử lý các khiếu nại phát sinh liên quan đến sản phẩm hư hỏng hoặc có lỗi từ nhà bán hàng. Về điều kiện bảo hành sản phẩm sẽ tuân thủ theo chính sách từ Nhà bán hàng.');
-
-# ========================================== ROLE ==========================================
-insert into depot_store.role (id, type)
-values (1, 'ROLE_USER'),
-       (2, 'ROLE_SHOP'),
-       (3, 'ROLE_ADMIN');
-
-# ========================================== ADMIN_ACCOUNT ==========================================
-insert into depot_store.users(id, email, name, password, phone_number)
-values (1, 'tthanhnhan1512@gmail.com', 'Trần Thanh Nhân','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
-insert into depot_store.users(id, email, name, password, phone_number)
-values (2, 'user1@gmail.com', 'Anonymouse 1','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
-insert into depot_store.users(id, email, name, password, phone_number)
-values (3, 'user2@gmail.com', 'Anonymouse 2','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
-insert into depot_store.users(id, email, name, password, phone_number)
-values (4, 'user3@gmail.com', 'Anonymouse 3','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
-insert into depot_store.users(id, email, name, password, phone_number)
-values (5, 'user4@gmail.com', 'Anonymouse 4','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
-insert into depot_store.users(id, email, name, password, phone_number)
-values (6, 'user5@gmail.com', 'Anonymouse 5','$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.', '0946286951');
-
-
-insert depot_store.user_role(user_id, role_id) values (1, 3);
-insert depot_store.user_role(user_id, role_id) values (2, 1);
-insert depot_store.user_role(user_id, role_id) values (3, 1);
-insert depot_store.user_role(user_id, role_id) values (4, 1);
-insert depot_store.user_role(user_id, role_id) values (5, 1);
-insert depot_store.user_role(user_id, role_id) values (6, 1);
-
 # ========================================== ORDER_STATUS ==========================================
 insert into depot_store.orders_status (id, status, title, description, label_confirm, label_created_at)
-values (1, 'PENDING', 'Đang đợi xác nhận',
-        'Đơn hàng từ người mua đang đợi được xác nhân. Kiểm tra lại đơn hàng và nhấn nút "Xác nhận đơn hàng" để xác nhận.',
-        'Xác nhận đơn hàng', 'Tạo đơn hàng'),
-       (2, 'CONFIRMED', 'Đã xác nhận', 'Đơn hàng đã được xác nhận. Đóng gói đơn hàng và chuyển sang vận chuyển.',
-        'Vận chuyển đơn hàng', 'Đã xác nhận'),
-       (3, 'SHIPPING', 'Đang giao hàng',
-        'Đơn hàng đang được vận chuyển. Hoàn tất giai đoạn giao hàng khi xác nhận người mua đã nhận được hàng.',
-        'Giao hàng thành công', 'Bắt đầu giao hàng'),
-       (4, 'COMPLETED', 'Đã hoàn thành', 'Người dùng đã nhận được hàng. Chọn để hoàn tất và kết thúc đơn hàng.',
-        'Hoàn tất đơn hàng', 'Hoàn tất đơn hàng'),
+values (1, 'PENDING','Đang đợi xác nhận', 'Đơn hàng từ người mua đang đợi được xác nhân. Kiểm tra lại đơn hàng và nhấn nút "Xác nhận đơn hàng" để xác nhận.', 'Xác nhận đơn hàng', 'Tạo đơn hàng'),
+       (2, 'CONFIRMED', 'Đã xác nhận', 'Đơn hàng đã được xác nhận. Đóng gói đơn hàng và chuyển sang vận chuyển.', 'Vận chuyển đơn hàng', 'Đã xác nhận'),
+       (3, 'SHIPPING', 'Đang giao hàng', 'Đơn hàng đang được vận chuyển. Hoàn tất giai đoạn giao hàng khi xác nhận người mua đã nhận được hàng.', 'Giao hàng thành công', 'Bắt đầu giao hàng'),
+       (4, 'COMPLETED', 'Đã hoàn thành', 'Người dùng đã nhận được hàng. Chọn để hoàn tất và kết thúc đơn hàng.', 'Hoàn tất đơn hàng', 'Hoàn tất đơn hàng'),
        (5, 'CANCELLED', 'Đã hủy', 'Đơn hàng đã bị hủy', 'Hủy đơn hàng', 'Hủy đơn hàng');
 
+# ========================================== RETURN_POLICY ==========================================
+insert into depot_store.return_policy(id, title, tooltip_title, tooltip_content) values 
+(1, 'Miễn phí hoàn trả', 'Miễn phí hoàn trả', 'Depot bảo vệ quyền lợi khách hàng hoàn trả sản phẩm miễn phí nếu lỗi của Shop (sản phẩm kém chất lượng, bị lỗi kỹ thuật, hư hỏng không sử dụng được, bể vỡ, không đúng mô tả, hoặc không đúng như đơn đặt hàng).'),
+(2, '48 giờ hoàn trả', 'Chính sách hoàn trả của Depot', 'Trả hàng hoàn tiền trong vòng 48 giờ cho các sản phẩm bị lỗi kỹ thuật, bể vỡ, không đúng mô tả hoặc không đúng như đơn đặt hàng.'),
+(3, 'Bảo hành theo chính sách từ Nhà bán hàng', 'Bảo hành theo chính sách từ Nhà bán hàng', 'Depot sẽ xử lý các khiếu nại phát sinh liên quan đến sản phẩm hư hỏng hoặc có lỗi từ nhà bán hàng. Về điều kiện bảo hành sản phẩm sẽ tuân thủ theo chính sách từ Nhà bán hàng.');
+
+# ========================================== ROLE ==========================================
+insert into depot_store.role (id, type) values 
+(1, 'ROLE_USER'),
+(2, 'ROLE_SHOP'),
+(3, 'ROLE_ADMIN');
+
+# ========================================== ADMIN_ACCOUNT ==========================================
+INSERT INTO users (id, created_at, updated_at, email, name, password, phone_number) VALUES
+("1","2025-04-01 15:13:36.000000","2025-04-01 15:13:36.000000","tthanhnhan1512@gmail.com","Trần Thanh Nhân","$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.","0946286951"),
+("2","2025-04-01 15:13:36.000000","2025-04-01 15:13:36.000000","user1@gmail.com","Anonymouse 1","$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.","0946286951"),
+("3","2025-04-01 15:13:36.000000","2025-04-01 15:13:36.000000","user2@gmail.com","Anonymouse 2","$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.","0946286951"),
+("4","2025-04-01 15:13:36.000000","2025-04-01 15:13:36.000000","user3@gmail.com","Anonymouse 3","$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.","0946286951"),
+("5","2025-04-01 15:13:36.000000","2025-04-01 15:13:36.000000","user4@gmail.com","Anonymouse 4","$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.","0946286951"),
+("6","2025-04-01 15:13:36.000000","2025-04-01 15:13:36.000000","user5@gmail.com","Anonymouse 5","$2a$10$nC85ASrpuW/qaU06hsney.GW/2pvlw41dnIrJdBXdKILGnDK2FY7.","0946286951");
+ 
+INSERT INTO user_role (user_id, role_id) VALUES
+("1","1"),
+("2","1"),
+("3","1"),
+("4","1"),
+("5","1"),
+("6","1"),
+-- ROLE_SHOP
+("2","2"),
+("4","2"),
+("3","2"),
+("5","2"),
+("6","2"),
+-- ROLE_ADMIN
+("1","3");
+
+select * from user_role
+
+# ========================================== SALES_REGISTER - ĐƠN ĐĂNG KÝ BÁN HÀNG ==========================================
+INSERT INTO sales_register (id, created_at, updated_at, address_detail, city, district, shop_email, shop_name, shop_phone, status, wards, warehouse_region_name, user_id) VALUES
+("1", "2024-10-05 08:45:21", "2024-11-01 12:30:10", "Số 15 Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1, TP Hồ Chí Minh", "TP Hồ Chí Minh", "Quận 1", "boonlinecs2@gmail.com", "boonlinecs2", "0938123456", "1", "Phường Nguyễn Cư Trinh", "TP Hồ Chí Minh", "2"),
+("2", "2025-02-12 14:10:37", "2025-02-20 10:15:50", "Số 88 Láng Hạ, Phường Thành Công, Quận Ba Đình, Hà Nội", "Hà Nội", "Ba Đình", "thegreentea@gmail.com", "The Green Tea", "0987564321", "1", "Phường Thành Công", "Hà Nội", "3"),
+("3", "2024-09-20 07:55:10", "2024-09-30 18:20:45", "Số 102 Điện Biên Phủ, Phường Đa Kao, Quận 1, TP Hồ Chí Minh", "TP Hồ Chí Minh", "Quận 1", "mochahouse@gmail.com", "Mocha House", "0912345678", "1", "Phường Đa Kao", "TP Hồ Chí Minh", "4"),
+("4", "2025-01-25 11:35:29", "2025-02-02 16:45:32", "Số 25 Trần Phú, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng", "Đà Nẵng", "Hải Châu", "seasidecoffee@gmail.com", "Seaside Coffee", "0978654321", "1", "Phường Hải Châu 1", "Đà Nẵng", "5"),
+("5", "2024-12-07 15:10:50", "2024-12-15 14:30:27", "Số 40 Nguyễn Văn Cừ, Phường An Khánh, Quận Ninh Kiều, Cần Thơ", "Cần Thơ", "Ninh Kiều", "sunsetbistro@gmail.com", "Sunset Bistro", "0923456789", "1", "Phường An Khánh", "Cần Thơ", "6");
 
 
+# ========================================== SHOP - CỬA HÀNG =========================================
+SET FOREIGN_KEY_CHECKS = 0; 
+
+INSERT INTO shop (
+    id, created_at, updated_at, address_detail, city, district, email, 
+    is_deleted, is_official_shop, phone_number, product_total, response_time, 
+    shop_background, shop_logo, shop_name, shop_slogan, slug, time_prepare_product, 
+    wards, warehouse_region_name, rating_id, user_id
+) VALUES 
+(
+    1, "2025-02-21 00:11:29.840000", "2025-02-21 00:11:29.840000", 
+    "Số 15 Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1, TP Hồ Chí Minh", 
+    "TP Hồ Chí Minh", "Quận 1", "boonlinecs2@gmail", 
+    0, 0, "0938123456", 0, NULL, 
+    NULL, NULL, "boonlinecs2", NULL, "boonlinecs2", NULL, 
+    "Phường Nguyễn Cư Trinh", "TP Hồ Chí Minh", 1, 2
+),
+(
+    2, "2025-02-12 14:10:37", "2025-02-20 10:15:50", 
+    "Số 88 Láng Hạ, Phường Thành Công, Quận Ba Đình, Hà Nội", 
+    "Hà Nội", "Ba Đình", "thegreentea@gmail.com", 
+    0, 0, "0987564321", 0, NULL, 
+    NULL, NULL, "The Green Tea", NULL, "the-green-tea", NULL, 
+    "Phường Thành Công", "Hà Nội", 2, 3
+),
+(
+    3, "2024-09-20 07:55:10", "2024-09-30 18:20:45", 
+    "Số 102 Điện Biên Phủ, Phường Đa Kao, Quận 1, TP Hồ Chí Minh", 
+    "TP Hồ Chí Minh", "Quận 1", "mochahouse@gmail.com", 
+    0, 0, "0912345678", 0, NULL, 
+    NULL, NULL, "Mocha House", NULL, "mocha-house", NULL, 
+    "Phường Đa Kao", "TP Hồ Chí Minh", 3, 4
+),
+(
+    4, "2025-01-25 11:35:29", "2025-02-02 16:45:32", 
+    "Số 25 Trần Phú, Phường Hải Châu 1, Quận Hải Châu, Đà Nẵng", 
+    "Đà Nẵng", "Hải Châu", "seasidecoffee@gmail.com", 
+    0, 0, "0978654321", 0, NULL, 
+    NULL, NULL, "Seaside Coffee", NULL, "seaside-coffee", NULL, 
+    "Phường Hải Châu 1", "Đà Nẵng", 4, 5
+),
+(
+    5, "2024-12-07 15:10:50", "2024-12-15 14:30:27", 
+    "Số 40 Nguyễn Văn Cừ, Phường An Khánh, Quận Ninh Kiều, Cần Thơ", 
+    "Cần Thơ", "Ninh Kiều", "sunsetbistro@gmail.com", 
+    0, 0, "0923456789", 0, NULL, 
+    NULL, NULL, "Sunset Bistro", NULL, "sunset-bistro", NULL, 
+    "Phường An Khánh", "Cần Thơ", 5, 6
+);
+
+INSERT INTO RATING_INFO (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("1","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO RATING_INFO (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("2","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO RATING_INFO (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("3","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO RATING_INFO (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("4","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO RATING_INFO (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("5","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+# ========================================== PRODUCT - SẢN PHẨM =========================================
+
+-- ATTRIBUTE - THUỘC TÍNH TRONG SẢN PHẨM
+INSERT INTO attribute (id, created_at, updated_at, is_deleted, name, attributes_id) 
+VALUES
+("1", "2025-04-01 15:58:11.613000", "2025-04-01 15:58:11.613000", "0", "Màu sắc", "1"),
+("2", "2025-04-01 15:58:11.613000", "2025-04-01 15:58:11.613000", "0", "Kích thước", "1"),
+("3", "2025-04-01 15:58:11.613000", "2025-04-01 15:58:11.613000", "0", "Chất liệu", "1");
+
+-- ATTRIBUTE_OPTION - TÙY CHỌN TRONG THUỘC TÍNH
+-- Các tùy chọn cho "Màu sắc"
+INSERT INTO attribute_option (id, created_at, updated_at, image, is_deleted, name, value, attribute_id) 
+VALUES
+("1", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Trắng", "trang", "1"),
+("2", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Đen", "den", "1"),
+("3", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Đỏ", "do", "1"),
+("4", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Xanh dương", "xanh-duong", "1"),
+("5", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Vàng", "vang", "1"),
+("6", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Hồng", "hong", "1"),
+("7", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Xanh lá", "xanh-la", "1"),
+("8", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Xám", "xam", "1");
+
+-- Các tùy chọn cho "Kích thước"
+INSERT INTO attribute_option (id, created_at, updated_at, image, is_deleted, name, value, attribute_id) 
+VALUES
+("9", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "S", "s", "2"),
+("10", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "M", "m", "2"),
+("11", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "L", "l", "2"),
+("12", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "XL", "xl", "2"),
+("13", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "XXL", "xxl", "2"),
+("14", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "XS", "xs", "2"),
+("15", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "XXXS", "xxxs", "2");
+
+-- Các tùy chọn cho "Chất liệu"
+INSERT INTO attribute_option (id, created_at, updated_at, image, is_deleted, name, value, attribute_id) 
+VALUES
+("16", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Cotton", "cotton", "3"),
+("17", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Polyester", "polyester", "3"),
+("18", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Lụa", "lua", "3"),
+("19", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Len", "len", "3"),
+("20", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Da", "da", "3"),
+("21", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Nylon", "nylon", "3"),
+("22", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Vải lanh", "vai-lanh", "3"),
+("23", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Thun", "thun", "3"),
+("24", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Kaki", "kaki", "3"),
+("25", "2025-04-01 15:58:11.612000", "2025-04-01 15:58:11.612000", "", "0", "Bamboo", "bamboo", "3");
+
+-- RATING PRODUCT
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("6","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("7","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("8","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("9","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("10","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("11","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("12","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("13","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("14","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("15","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("16","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("17","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("18","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("19","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("20","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("21","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("22","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("23","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("24","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","0","0","0","0","0");
+INSERT INTO rating_info (id, created_at, updated_at, star1, star2, star3, star4, star5) VALUES("25","2025-02-21 00:11:29.801000","2025-02-21 00:11:29.801000","0","0","0","0","0");
+
+-- DEAL
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("1","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","20","99000.00",NULL,"125000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("2","2025-04-01 15:56:35.394000","2025-04-01 15:56:35.394000","25","100000.00","1","135000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("3","2025-04-01 15:56:35.403000","2025-04-01 15:56:35.403000","20","99000.00","1","125000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("4","2025-04-01 15:57:28.425000","2025-04-01 15:57:28.425000","25","100000.00","1","135000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("5","2025-04-01 15:57:28.429000","2025-04-01 15:57:28.429000","20","99000.00","1","125000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("6","2025-04-01 15:58:11.602000","2025-04-01 15:58:11.602000","25","100000.00",NULL,"135000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("7","2025-04-01 15:58:11.604000","2025-04-01 15:58:11.604000","20","99000.00",NULL,"125000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("8","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","10","54000.00",NULL,"60000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("9","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","30","70000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("10","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","12","88000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("11","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","22","78000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("12","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","8","92000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("13","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","17","83000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("14","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","20","95000.00",NULL,"120000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("15","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","25","75000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("16","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","30","85000.00",NULL,"120000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("17","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","10","93000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("18","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","12","89000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("19","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","18","90000.00",NULL,"110000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("20","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","15","87000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("21","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","20","99000.00",NULL,"125000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("22","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","15","85000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("23","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","10","45000.00",NULL,"50000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("24","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","25","75000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("25","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","18","82000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("26","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","5","95000.00",NULL,"100000.00");
+INSERT INTO deal (id, created_at, updated_at, discount_percent, final_price, is_deleted, price) VALUES("27","2025-04-01 15:58:11.610000","2025-04-01 15:58:11.610000","20","96000.00",NULL,"120000.00");
+
+-- PRODUCT
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("1","2025-04-01 15:58:11.611000","2025-04-01 15:58:11.611000","","0","1","Áo thun,OEM","Áo thun tay lỡ form rộng - phông nam nữ cotton oversize - T shirt God said - 2N Unisex","0","80","","ao-thun-tay-lo-form-rong-phong-nam-nu-cotton-oversize-t-shirt-god-said-2n-unisex-1","1","1","6","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("2","2025-04-01 16:10:11.611000","2025-04-01 16:10:11.611000","","0","1","Áo khoác, Unisex","Áo khoác nhẹ mùa thu - Jacket cotton unisex","0","100","","ao-khoac-nhe-mua-thu-jacket-cotton-unisex-2","2","8","7","2","18");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("3","2025-04-01 16:15:22.611000","2025-04-01 16:15:22.611000","","0","1","Quần jeans, nam nữ","Quần jeans dáng suông nam nữ - Unisex Denim Pants","0","120","","quan-jeans-dang-suong-nam-nu-unisex-denim-pants-3","2","9","8","2","18");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("4","2025-04-01 16:20:33.611000","2025-04-01 16:20:33.611000","","0","1","Giày thể thao, nam","Giày thể thao thể dục nam - Sports Shoes Men","0","150","","giay-the-thao-the-duc-nam-sports-shoes-men-4","2","10","9","2","17");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("5","2025-04-01 16:25:44.611000","2025-04-01 16:25:44.611000","","0","1","Giày cao gót, nữ","Giày cao gót mùa hè - High Heels Women","0","50","","giay-cao-got-mua-he-high-heels-women-5","1","11","10","2","2");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("6","2025-04-01 16:30:55.611000","2025-04-01 16:30:55.611000","","0","1","Túi xách, nữ","Túi xách công sở nữ - Office Handbag Women","0","200","","tui-xach-cong-so-nu-office-handbag-women-6","1","12","11","2","2");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("7","2025-04-01 16:35:06.611000","2025-04-01 16:35:06.611000","","0","1","Váy đầm, nữ","Váy đầm dạ hội nữ - Evening Dress Women","0","80","","vay-dam-da-hoi-nu-evening-dress-women-7","1","13","12","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("8","2025-04-01 16:40:17.611000","2025-04-01 16:40:17.611000","","0","1","Balo, unisex","Balo thể thao unisex - Sports Backpack Unisex","0","70","","balo-the-thao-unisex-sports-backpack-unisex-8","2","14","13","2","17");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("9","2025-04-01 16:45:28.611000","2025-04-01 16:45:28.611000","","0","1","Áo sơ mi, nam","Áo sơ mi công sở nam - Men's Office Shirt","0","90","","ao-so-mi-cong-so-nam-mens-office-shirt-9","2","15","14","2","18");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("10","2025-04-01 16:50:39.611000","2025-04-01 16:50:39.611000","","0","1","Áo len, nữ","Áo len cổ tròn nữ - Women's Knit Sweater","0","110","","ao-len-co-tron-nu-womens-knit-sweater-10","1","16","15","2","2");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("11","2025-04-01 16:55:50.611000","2025-04-01 16:55:50.611000","","0","1","Áo thun, nam","Áo thun nam cổ tròn - Men's Cotton T-shirt","0","130","","ao-thun-nam-co-tron-mens-cotton-t-shirt-11","2","17","16","2","18");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("12","2025-04-01 17:00:01.611000","2025-04-01 17:00:01.611000","","0","1","Áo khoác, Unisex","Áo khoác mùa đông - Winter Jacket Unisex","0","140","","ao-khoac-mua-dong-winter-jacket-unisex-12","1","18","17","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("13","2025-04-01 17:05:12.611000","2025-04-01 17:05:12.611000","","0","1","Quần jogger, nam","Quần jogger thể thao nam - Men's Jogger Pants","0","160","","quan-jogger-the-thao-nam-mens-jogger-pants-13","2","19","18","2","17");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("14","2025-04-01 17:10:23.611000","2025-04-01 17:10:23.611000","","0","1","Giày lười, nam","Giày lười nam - Men's Loafers Shoes","0","90","","giay-luoi-nam-mens-loafers-shoes-14","2","20","19","2","17");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("15","2025-04-01 17:15:34.611000","2025-04-01 17:15:34.611000","","0","1","Túi đeo chéo, nữ","Túi đeo chéo nữ - Crossbody Bag Women","0","130","","tui-deo-cheo-nu-crossbody-bag-women-15","1","21","20","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("16","2025-04-01 17:20:45.611000","2025-04-01 17:20:45.611000","","0","1","Váy midi, nữ","Váy midi công sở nữ - Women's Midi Dress","0","110","","vay-midi-cong-so-nu-womens-midi-dress-16","1","22","21","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("17","2025-04-01 17:25:56.611000","2025-04-01 17:25:56.611000","","0","1","Giày thể thao, nữ","Giày thể thao nữ - Women's Sports Shoes","0","120","","giay-the-thao-nu-womens-sports-shoes-17","1","23","22","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("18","2025-04-01 17:30:07.611000","2025-04-01 17:30:07.611000","","0","1","Bộ đồ thể thao, nam","Bộ đồ thể thao nam - Men's Tracksuit","0","200","","bo-do-the-thao-nam-mens-tracksuit-18","2","24","23","2","17");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("19","2025-04-01 17:35:18.611000","2025-04-01 17:35:18.611000","","0","1","Áo khoác, nữ","Áo khoác da nữ - Women's Leather Jacket","0","70","","ao-khoac-da-nu-womens-leather-jacket-19","1","25","24","2","1");
+INSERT INTO product (id, created_at, updated_at, description, is_deleted, is_public, keywords, name, order_count, quantity, short_description, slug, category_id, deal_id, rating_id, shop_id, sub_category_id) VALUES("20","2025-04-01 17:40:29.611000","2025-04-01 17:40:29.611000","","0","1","Giày boot, nữ","Giày boot nữ - Women's Boots","0","160","","giay-boot-nu-womens-boots-20","2","26","25","2","17");
+ 

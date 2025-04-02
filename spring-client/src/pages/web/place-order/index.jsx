@@ -1,22 +1,22 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Helmet from "../../../components/common/helmet";
 import Layout from "../../../components/web/layout";
-import {Link, useNavigate} from "react-router-dom";
-import {protectedRequest} from "../../../util/request-method";
-import {useDispatch, useSelector} from "react-redux";
-import {formatCurrency} from "../../../util/format";
+import { Link, useNavigate } from "react-router-dom";
+import { protectedRequest } from "../../../util/request-method";
+import { useDispatch, useSelector } from "react-redux";
+import { formatCurrency } from "../../../util/format";
 import NotFoundImage from "../../../assets/images/image-not-found.jpg";
 import * as Icon from '@iconscout/react-unicons';
-import {Radio} from "@mui/material";
-import {placeOrder} from "../../../redux/actions/orderActions";
+import { Radio } from "@mui/material";
+import { placeOrder } from "../../../redux/actions/orderActions";
 import ToastCustom from "../../../components/common/toast-custom";
-import {toast} from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import * as types from "../../../redux/constants/ActionType";
 
 function PlaceOrder() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {user, cart} = useSelector(state => state);
+    const { user, cart } = useSelector(state => state);
     const [list, setList] = useState([]);
     const [total, setTotal] = useState(0);
     const [finalTotal, setFinalTotal] = useState(0);
@@ -47,7 +47,7 @@ function PlaceOrder() {
             if (index !== -1) {
                 list[index].items = [...list[index].items, item];
             } else {
-                list = [...list, {shop, items: [item]}];
+                list = [...list, { shop, items: [item] }];
             }
         })
         setTotal(total);
@@ -77,12 +77,12 @@ function PlaceOrder() {
             <Layout>
                 <div className="bg-app-1">
                     <div className="container py-8">
-                        <ToastCustom/>
+                        <ToastCustom />
                         <div className="flex flex-wrap flex-row gap-6">
                             <div className="basis-[65%]">
                                 <Information user={user} address={address} setAddress={setAddress}
-                                             paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod}
-                                             shippingMethod={shippingMethod} setShippingMethod={setShippingMethod}
+                                    paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod}
+                                    shippingMethod={shippingMethod} setShippingMethod={setShippingMethod}
                                 />
                             </div>
                             <div className="flex-1 flex flex-wrap flex-col gap-6">
@@ -90,30 +90,30 @@ function PlaceOrder() {
                                     <div
                                         className="flex items-center justify-between px-5 pt-3.5 pb-3 rounded-t-md border-b border-border-1 ">
                                         <div className="flex items-center gap-2">
-                                            <Icon.UilClipboardAlt className="w-[20px] h-[20px] text-primary"/>
+                                            <Icon.UilClipboardAlt className="w-[20px] h-[20px] text-primary" />
                                             <h5 className="text-md font-bold text-primary">Thông tin đơn hàng</h5>
                                         </div>
                                     </div>
                                     <div className="px-5 border-b border-border-1">
                                         {list.map((order, index) => (
                                             <div key={order.shop.id}
-                                                 className={`${index < list.length - 1 && 'border-b'}  border-border-1 py-5`}>
+                                                className={`${index < list.length - 1 && 'border-b'}  border-border-1 py-5`}>
                                                 <Link to={`/cua-hang/${order.shop?.slug}`}
-                                                      className="max-w-max flex items-center gap-2 font-semibold text-md transition-all text-black hover:text-primary">
-                                                    <Icon.UilStore className="w-[20px] h-[20px]"/>
+                                                    className="max-w-max flex items-center gap-2 font-semibold text-md transition-all text-black hover:text-primary">
+                                                    <Icon.UilStore className="w-[20px] h-[20px]" />
                                                     <p className="line-clamp-1">{order.shop?.shopName}</p>
                                                 </Link>
                                                 {order.items.map(item => (
                                                     <div key={item.id} className="flex gap-3 pt-4">
                                                         <Link to={`/san-pham/${item.product.slug}`}
-                                                              className="block min-w-[65px] max-w-[65px] min-h-[65px] max-h-[65px] overflow-hidden rounded-md border border-border-1">
+                                                            className="block min-w-[65px] max-w-[65px] min-h-[65px] max-h-[65px] overflow-hidden rounded-md border border-border-1">
                                                             <img alt={""} className="w-full h-auto rounded-md"
-                                                                 src={item.product?.images?.length > 0 ? item.product.images[0].url : NotFoundImage}/>
+                                                                src={item.product?.images?.length > 0 ? item.product.images[0].url : NotFoundImage} />
                                                         </Link>
                                                         <div className="w-full">
                                                             <div className="mb-2">
                                                                 <Link to={`/san-pham/${item.product.slug}`}
-                                                                      className="text-tiny font-medium line-clamp-1 mb-1 transition-all hover:text-primary-hover">
+                                                                    className="text-tiny font-medium line-clamp-1 mb-1 transition-all hover:text-primary-hover">
                                                                     {item.product.name}
                                                                 </Link>
 
@@ -152,9 +152,9 @@ function PlaceOrder() {
                                                 Ghi chú cho cửa hàng
                                             </p>
                                             <textarea rows="4"
-                                                      value={note} onChange={(e) => setNote(e.target.value)}
-                                                      style={{resize: 'none'}}
-                                                      className="block p-3 w-full text-md rounded-md border border-border-1 focus:outline-none font-medium text-black-1"/>
+                                                value={note} onChange={(e) => setNote(e.target.value)}
+                                                style={{ resize: 'none' }}
+                                                className="block p-3 w-full text-md rounded-md border border-border-1 focus:outline-none font-medium text-black-1" />
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@ function PlaceOrder() {
                                             </p>
                                         </div>
                                         <button onClick={handlePlaceOrder}
-                                                className="rounded-md px-8 py-2 font-bold w-full bg-primary text-white hover:bg-primary hover:text-white active:bg-primary transition duration-400 cursor-pointer">
+                                            className="rounded-md px-8 py-2 font-bold w-full bg-primary text-white hover:bg-primary hover:text-white active:bg-primary transition duration-400 cursor-pointer">
                                             Đặt mua
                                         </button>
                                     </div>
@@ -227,6 +227,7 @@ const Information = (props) => {
                 if (err.status === 403) navigate("/dang-nhap")
                 setAddresses([])
             })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user])
 
     return (
@@ -235,14 +236,14 @@ const Information = (props) => {
                 <div
                     className="flex items-center justify-between px-5 pt-3.5 pb-3 rounded-t-md border-b border-border-1 ">
                     <div className="flex items-center gap-2">
-                        <Icon.UilMapMarker className="w-[20px] h-[20px] text-primary"/>
+                        <Icon.UilMapMarker className="w-[20px] h-[20px] text-primary" />
                         <h5 className="text-md font-bold text-primary">Địa chỉ nhận hàng</h5>
                     </div>
                     <div className="flex items-center gap-1 text-primary">
                         <Link to='/nguoi-dung/dia-chi' className="font-semibold text-md">
                             Thay đổi
                         </Link>
-                        <Icon.UilAngleRight className="w-[20px] h-[20px]"/>
+                        <Icon.UilAngleRight className="w-[20px] h-[20px]" />
                     </div>
                 </div>
                 <div className="px-5">
@@ -253,14 +254,14 @@ const Information = (props) => {
                     }
                     {addresses.map((item, index) => (
                         <div key={index}
-                             className={`${index < addresses.length - 1 && 'border-b border-border-1'} py-5 flex gap-6 items-center`}>
+                            className={`${index < addresses.length - 1 && 'border-b border-border-1'} py-5 flex gap-6 items-center`}>
                             <div>
                                 <input type="radio" id={`address-${index}`} name="address"
-                                       checked={address ? address?.id === item.id : item.isDefault}
-                                       onChange={(e) => {
-                                           if (e.target.checked) setAddress(item)
-                                       }}
-                                       className="w-4 h-4 accent-primary"/>
+                                    checked={address ? address?.id === item.id : item.isDefault}
+                                    onChange={(e) => {
+                                        if (e.target.checked) setAddress(item)
+                                    }}
+                                    className="w-4 h-4 accent-primary" />
                             </div>
                             <label className="flex-1" htmlFor={`address-${index}`}>
                                 <p className="font-medium text-black-1 flex items-center gap-3">
@@ -269,21 +270,21 @@ const Information = (props) => {
                                     </span>
                                     <span className="font-medium text-tiny text-[#A5B4BE]">|</span>
                                     <span className="text-tiny flex items-center gap-2">
-                                        <Icon.UilPhoneVolume className="w-[16px] h-[16px]"/>
+                                        <Icon.UilPhoneVolume className="w-[16px] h-[16px]" />
                                         {item.phoneNumber}
                                     </span>
                                     {item.email &&
                                         <>
                                             <span className="font-medium text-md text-[#A5B4BE]">|</span>
                                             <span className="text-tiny flex items-center gap-2">
-                                                <Icon.UilEnvelopeCheck className="w-[16px] h-[16px]"/>
+                                                <Icon.UilEnvelopeCheck className="w-[16px] h-[16px]" />
                                                 {item.email}
                                             </span>
                                         </>
                                     }
                                 </p>
                                 <p className="flex items-center gap-1 font-medium text-md text-black-1 mt-1.5">
-                                    <Icon.UilMapMarker className="w-[20px] h-[20px]"/>
+                                    <Icon.UilMapMarker className="w-[20px] h-[20px]" />
                                     {item.addressDetail}, {item.wards}, {item.district}, {item.city}
                                 </p>
                                 {item.isDefault &&
@@ -300,40 +301,40 @@ const Information = (props) => {
                 <div
                     className="flex items-center justify-between px-5 pt-3.5 pb-3 rounded-t-md border-b border-border-1">
                     <div className="flex items-center gap-2">
-                        <Icon.UilTruck className="w-[20px] h-[20px] text-primary"/>
+                        <Icon.UilTruck className="w-[20px] h-[20px] text-primary" />
                         <h5 className="text-md font-bold text-primary">Phương thức giao hàng</h5>
                     </div>
                 </div>
                 <div className="p-5">
                     <div className="flex items-center gap-6">
                         <button onClick={() => setShippingMethod("now")}
-                                className={`${shippingMethod === "now" ? "border-primary" : "border-border-1"} block text-left rounded-lg p-2.5 border-2 max-w-max min-w-[260px]`}>
+                            className={`${shippingMethod === "now" ? "border-primary" : "border-border-1"} block text-left rounded-lg p-2.5 border-2 max-w-max min-w-[260px]`}>
                             <div className="mb-0.5 flex items-center justify-start gap-2">
                                 <img alt="shipping" className="w-[32px]"
-                                     src="https://salt.tikicdn.com/ts/upload/85/45/34/2fc25c6a660d84a41a6bf9276ce160ba.png"/>
+                                    src="https://salt.tikicdn.com/ts/upload/85/45/34/2fc25c6a660d84a41a6bf9276ce160ba.png" />
                                 <p className="text-md font-semibold text-success">Trước 16:00 hôm nay</p>
                             </div>
                             <p className="mb-1 text-tiny font-medium text-secondary">Vận chuyển: 25.000đ</p>
                             <div
                                 className="flex items-center justify-start gap-2 bg-primary-bg rounded-md text-primary py-1 px-3 max-w-max">
                                 <img alt="shipping" className="h-[18px]"
-                                     src="https://salt.tikicdn.com/ts/upload/df/e2/b4/063c4d55ca380f818547f00f5175d39f.png"/>
+                                    src="https://salt.tikicdn.com/ts/upload/df/e2/b4/063c4d55ca380f818547f00f5175d39f.png" />
                                 <p className="relative top-[1px] text-sm font-semibold">Freeship 100%
                                     với {formatCurrency(85999)}</p>
                             </div>
                         </button>
                         <button onClick={() => setShippingMethod("fast")}
-                                className={`${shippingMethod === "fast" ? "border-primary" : "border-border-1"} block text-left rounded-lg p-2.5 border-2 max-w-max min-w-[260px]`}>
+                            className={`${shippingMethod === "fast" ? "border-primary" : "border-border-1"} block text-left rounded-lg p-2.5 border-2 max-w-max min-w-[260px]`}>
                             <div className="mb-0.5 flex items-center justify-start gap-2">
                                 <img alt="shipping" className="w-[32px]"
-                                     src="https://salt.tikicdn.com/ts/upload/67/e4/c2/02b5400b39bb3371e06d33c1e9f4d854.png"/>
+                                    src="https://salt.tikicdn.com/ts/upload/67/e4/c2/02b5400b39bb3371e06d33c1e9f4d854.png" />
                                 <p className="text-md font-semibold text-success">Ngày mai, trước 23:00</p>
                             </div>
                             <p className="mb-1 text-tiny font-medium text-secondary">Vận chuyển: 14.000đ</p>
                             <div
                                 className="flex items-center justify-start gap-2 bg-primary-bg rounded-md text-primary py-1 px-3 max-w-max">
                                 <img alt="shipping" className="h-[18px]"
-                                     src="https://salt.tikicdn.com/ts/upload/df/e2/b4/063c4d55ca380f818547f00f5175d39f.png"/>
+                                    src="https://salt.tikicdn.com/ts/upload/df/e2/b4/063c4d55ca380f818547f00f5175d39f.png" />
                                 <p className="relative top-[1px] text-sm font-semibold">Freeship 100%
                                     với {formatCurrency(48999)}</p>
                             </div>
@@ -345,14 +346,14 @@ const Information = (props) => {
                 <div
                     className="flex items-center justify-between px-5 pt-3.5 pb-3 rounded-t-md border-b border-border-1">
                     <div className="flex items-center gap-2">
-                        <Icon.UilWallet className="w-[20px] h-[20px] text-primary"/>
+                        <Icon.UilWallet className="w-[20px] h-[20px] text-primary" />
                         <h5 className="text-md font-bold text-primary">Phương thức thanh toán</h5>
                     </div>
                 </div>
                 <div className="p-5">
                     <fieldset id="paymentMethod">
                         <label htmlFor="radio4"
-                               className={`flex gap-2 items-center py-2.5 px-1.5 rounded-md transition-all duration-400 ${paymentMethod !== 'cod' ? 'bg-secondary-bg' : 'bg-white shadow-md'}`}>
+                            className={`flex gap-2 items-center py-2.5 px-1.5 rounded-md transition-all duration-400 ${paymentMethod !== 'cod' ? 'bg-secondary-bg' : 'bg-white shadow-md'}`}>
                             <Radio
                                 id="radio4"
                                 size={"small"}
@@ -367,7 +368,7 @@ const Information = (props) => {
                             </div>
                         </label>
                         <label htmlFor="radio5"
-                               className={`mt-6 flex gap-2 items-center py-2.5 px-1.5 rounded-md transition-all duration-400 ${paymentMethod !== 'depot' ? 'bg-secondary-bg' : 'bg-white shadow-md'}`}>
+                            className={`mt-6 flex gap-2 items-center py-2.5 px-1.5 rounded-md transition-all duration-400 ${paymentMethod !== 'depot' ? 'bg-secondary-bg' : 'bg-white shadow-md'}`}>
                             <Radio
                                 id="radio5"
                                 size={"small"}
@@ -386,7 +387,7 @@ const Information = (props) => {
                     </fieldset>
                     <div className="mt-8 text-center">
                         <button type={"button"}
-                                className="rounded-md w-[40%] px-4 py-3 text-md font-bold bg-secondary-bg text-black transition-all">
+                            className="rounded-md w-[40%] px-4 py-3 text-md font-bold bg-secondary-bg text-black transition-all">
                             Thêm phương thức khác
                         </button>
                     </div>

@@ -1,13 +1,13 @@
-import {formatBetweenDate} from "../../../util/format";
+import { formatBetweenDate } from "../../../util/format";
 
-function Info({shop}) {
-    console.log(shop)
+function Info({ shop }) {
+
     return (
         <div className="container">
             <div className="bg-white rounded-md mb-6 p-4">
-               <span className="font-medium text-base italic">
-                   "{shop.shopSlogan || "Không có"}"
-               </span>
+                <span className="font-medium text-base italic">
+                    "{shop.shopSlogan || "Không có"}"
+                </span>
             </div>
             <div className="bg-white rounded-md mb-6">
                 <h5 className="px-4 py-3 border-b border-border-1 font-semibold text-base">Hoạt động</h5>

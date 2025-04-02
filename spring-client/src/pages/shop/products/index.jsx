@@ -1,18 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import Layout from "../../../components/shop/layout";
+import React, { useEffect, useState } from 'react';
 import Helmet from "../../../components/common/helmet";
-import {protectedRequest} from "../../../util/request-method";
-import ProductTable from "./ProductTable";
 import ToastCustom from "../../../components/common/toast-custom";
+import Layout from "../../../components/shop/layout";
 import productService from "../../../service/ProductService";
+import ProductTable from "./ProductTable";
 
 function Products() {
     const [products, setProducts] = useState([]);
-    const [pagination, setPagination] = useState({page: 0, size: 10, loaded: false});
+    const [pagination, setPagination] = useState({ page: 0, size: 10, loaded: false });
 
     useEffect(() => {
         if (pagination.loaded) return;
-        productService.getProductByShop({page: pagination.page, size: pagination.size})
+        productService.getProductByShop({ page: pagination.page, size: pagination.size })
             .then(res => {
                 setPagination({
                     size: res.data.size,
@@ -26,14 +25,14 @@ function Products() {
                 window.scrollTo(0, 0);
             })
             .catch(err => {
-                console.log(err)
+                console.warn(err)
             })
     }, [pagination])
 
     return (
         <Helmet title="Depot - Quản lý sản phẩm">
             <Layout>
-                <ToastCustom/>
+                <ToastCustom />
                 <div className="w-full p-5 bg-white rounded-md mb-5 shadow">
                     <p className="font-bold text-base text-black">
                         Quản lý sản phẩm
@@ -41,7 +40,7 @@ function Products() {
                     </p>
                 </div>
                 <div className="w-full p-5 bg-white rounded-md">
-                    <ProductTable products={products} pagination={pagination} setPagination={setPagination}/>
+                    <ProductTable products={products} pagination={pagination} setPagination={setPagination} />
                 </div>
             </Layout>
         </Helmet>

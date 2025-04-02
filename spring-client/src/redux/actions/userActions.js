@@ -1,19 +1,19 @@
 import * as types from '../constants/ActionType'
-import {protectedRequest} from "../../util/request-method";
+import { protectedRequest } from "../../util/request-method";
 import userService from "../../service/UserService";
 
 export const login = async (payload) => {
-    const action = {type: types.user.USER_LOGIN_FAILED};
+    const action = { type: types.user.USER_LOGIN_FAILED };
     await userService.signIn(payload)
         .then(res => {
-            action.payload = {...res.data};
+            action.payload = { ...res.data };
             action.type = types.user.USER_LOGIN_SUCCESS;
         })
         .catch(err => {
             action.type = types.user.USER_LOGIN_FAILED;
             action.error = err.response?.data || 'Password invalid';
         })
-    return {...action}
+    return { ...action }
 }
 export const logout = async () => {
     return {
@@ -21,7 +21,7 @@ export const logout = async () => {
     }
 }
 export const validateToken = async () => {
-    let action = {type: types.user.CHECK_TOKEN_FAILED};
+    let action = { type: types.user.CHECK_TOKEN_FAILED };
     await protectedRequest().get("/auth/token-valid")
         .then(res => {
             action = {
@@ -30,23 +30,22 @@ export const validateToken = async () => {
             }
         })
         .catch(err => {
-            action = {type: types.user.CHECK_TOKEN_FAILED}
+            action = { type: types.user.CHECK_TOKEN_FAILED }
         })
-    return {...action}
+    return { ...action }
 }
 export const updateUser = async (user) => {
-    let action = {type: types.user.UPDATE_USER_FAILED};
-    await userService.updateProfile({...user})
+    let action = { type: types.user.UPDATE_USER_FAILED };
+    await userService.updateProfile({ ...user })
         .then(res => {
-            console.log(res)
             action = {
                 type: types.user.UPDATE_USER_SUCCESS,
-                payload: {...user},
+                payload: { ...user },
             }
         })
         .catch(err => {
-            console.log(err)
-            action = {type: types.user.UPDATE_USER_FAILED}
+            console.warn(err)
+            action = { type: types.user.UPDATE_USER_FAILED }
         })
-    return {...action}
+    return { ...action }
 }

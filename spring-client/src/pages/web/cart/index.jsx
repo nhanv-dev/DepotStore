@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import * as Icon from "@iconscout/react-unicons";
+import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import Helmet from "../../../components/common/helmet";
-import Layout from "../../../components/web/layout";
-import CartItem from "./CartItem";
-import {Link, useNavigate} from "react-router-dom";
-import * as Icon from "@iconscout/react-unicons"
-import {formatCurrency} from "../../../util/format";
-import {useDispatch, useSelector} from "react-redux";
-import {initializeCart} from "../../../redux/actions/cartActions";
 import StarRating from "../../../components/common/star-rating";
 import ToastCustom from "../../../components/common/toast-custom";
-import toast, { Toaster } from 'react-hot-toast';
+import Layout from "../../../components/web/layout";
+import { initializeCart } from "../../../redux/actions/cartActions";
+import { formatCurrency } from "../../../util/format";
+import CartItem from "./CartItem";
 
 function Cart() {
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ function Cart() {
     useEffect(() => {
         const load = async () => {
             dispatch(await initializeCart());
-            return {status: true}
+            return { status: true }
         }
         load().then(data => {
             if (data.status) setLoading(false)
@@ -39,7 +39,7 @@ function Cart() {
             if (index !== -1) {
                 list[index].items = [...list[index].items, i];
             } else {
-                list = [...list, {shop, items: [i]}];
+                list = [...list, { shop, items: [i] }];
             }
         })
         setCartByShop(list)
@@ -72,14 +72,14 @@ function Cart() {
         return (
             <div className="fixed z-50 bg-white top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                 <img src="https://www.pngrepo.com/png/199956/512/loading-loader.png" alt="spinner"
-                     className="w-[60px] h-[60x] animate-spin"/>
+                    className="w-[60px] h-[60x] animate-spin" />
             </div>
         )
 
     return (
         <Helmet title="Depot - Giỏ hàng">
             <Layout>
-                <ToastCustom/>
+                <ToastCustom />
                 <div className="bg-app-1">
                     <div className="container py-10">
                         <div className="flex flex-wrap items-start justify-start gap-6 relative">
@@ -90,17 +90,17 @@ function Cart() {
                                 {cartByShop?.length <= 0 ?
                                     <div className={`p-5 bg-white rounded-md mb-5`}>
                                         <div className="flex flex-col items-center justify-center"
-                                             style={{backgroundImage: `url()`}}>
+                                            style={{ backgroundImage: `url()` }}>
                                             <img alt="Your cart is empty"
-                                                 className="block w-[400px]"
-                                                 src="https://mir-s3-cdn-cf.behance.net/projects/404/54b13147340145.Y3JvcCw0MDUsMzE3LDAsNDI.png"/>
+                                                className="block w-[400px]"
+                                                src="https://mir-s3-cdn-cf.behance.net/projects/404/54b13147340145.Y3JvcCw0MDUsMzE3LDAsNDI.png" />
                                             <h5 className="absolute bottom-[100px] font-bold text-base">
                                                 Bạn chưa thêm sản phẩm vào giỏ hàng
                                             </h5>
                                         </div>
                                     </div> :
                                     <div>
-                                        <FilterCart cartByShop={cartByShop}/>
+                                        <FilterCart cartByShop={cartByShop} />
                                     </div>
                                 }
                             </div>
@@ -125,7 +125,7 @@ function Cart() {
                                         </p>
                                     </div>
                                     <button onClick={handleOrder}
-                                            className="w-full p-2 bg-primary rounded-md font-bold text-white hover:bg-primary-hover">
+                                        className="w-full p-2 bg-primary rounded-md font-bold text-white hover:bg-primary-hover">
                                         Mua hàng
                                     </button>
                                 </div>
@@ -138,7 +138,7 @@ function Cart() {
     );
 }
 
-const FilterCart = ({cartByShop}) => {
+const FilterCart = ({ cartByShop }) => {
 
     return (
         <>
@@ -148,28 +148,28 @@ const FilterCart = ({cartByShop}) => {
                         <div className="flex items-center justify-between pb-5 border-b border-b-border">
                             <div className="flex items-start justify-start gap-3">
                                 <Link to={`/cua-hang/${cart.shop.slug}`}
-                                      className=" block rounded-full flex items-center justify-center w-[46px] h-[46px] border-2 border-primary p-[2px]">
+                                    className=" block rounded-full flex items-center justify-center w-[46px] h-[46px] border-2 border-primary p-[2px]">
                                     <img alt="shop"
-                                         className="rounded-full"
-                                         src={cart.shop.shopLogo || 'https://www.iconpacks.net/icons/2/free-store-icon-2017-thumb.png'}/>
+                                        className="rounded-full"
+                                        src={cart.shop.shopLogo || 'https://www.iconpacks.net/icons/2/free-store-icon-2017-thumb.png'} />
                                 </Link>
                                 <div>
                                     <Link to={`/cua-hang/${cart.shop.slug}`}
-                                          className="mb-.5 block font-semibold text-base text-black-1 hover:text-primary transition-all">
+                                        className="mb-.5 block font-semibold text-base text-black-1 hover:text-primary transition-all">
                                         {cart.shop.shopName}
                                     </Link>
                                     <StarRating rating={cart.shop.ratingInfo?.avgRating || 0}
-                                                className="w-[16px] h-[16px]"/>
+                                        className="w-[16px] h-[16px]" />
                                 </div>
                             </div>
                             <Link to={`/cua-hang/${cart.shop.slug}`}
-                                  className="flex items-center gap-2 text-tiny font-semibold text-black">
-                                <Icon.UilCommentAltLines className="w-[16px]"/>
+                                className="flex items-center gap-2 text-tiny font-semibold text-black">
+                                <Icon.UilCommentAltLines className="w-[16px]" />
                                 Chat với Shop
                             </Link>
                         </div>
                         {cart?.items?.map((item, i) => (
-                            <CartItem key={i} item={item}/>
+                            <CartItem key={i} item={item} />
                         ))}
                     </div>
                 )

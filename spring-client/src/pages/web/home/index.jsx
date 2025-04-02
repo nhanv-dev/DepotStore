@@ -1,13 +1,14 @@
-import {useEffect, useState} from "react";
-import {Link, useSearchParams} from "react-router-dom";
-import Layout from "../../../components/web/layout";
+import { UilAngleRight } from "@iconscout/react-unicons";
+import { Grid } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Helmet from "../../../components/common/helmet";
-import ProductCard from "../../../components/web/product-card";
 import CustomPagination from "../../../components/web/custom-pagination";
-import {Grid} from "@mui/material";
+import Layout from "../../../components/web/layout";
+import ProductCard from "../../../components/web/product-card";
 import categoryService from "../../../service/CategoryService";
-import {UilAngleRight} from "@iconscout/react-unicons";
 import productService from "../../../service/ProductService";
+import { publicApp } from "../../../util/request-method";
 
 
 function Home() {
@@ -18,23 +19,23 @@ function Home() {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        categoryService.getCategory({page: 1, limit: 20, type: 'short'})
+        categoryService.getCategory({ page: 1, limit: 20, type: 'short' })
             .then(res => {
                 setCategories(res.data.content)
             })
             .catch(err => {
-                console.log(err)
+                console.warn(err)
             })
     }, [])
 
     useEffect(() => {
-        productService.getProduct({page: page - 1, size: 24})
+        productService.getProduct({ page: page - 1, size: 24 })
             .then(res => {
                 setItems(res.data.content)
                 setTotalPages(res.data.totalPages)
             })
             .catch(err => {
-                console.log(err)
+                console.warn(err)
                 setItems([])
                 setTotalPages(1)
             })
@@ -44,7 +45,7 @@ function Home() {
     return (
         <Helmet title="Depot - Trang chủ">
             <Layout>
-                <div className="bg-app-1 py-10">
+                <div className="bg-app-1 py-10 min-h-screen">
                     {categories.length > 0 &&
                         <div className="container mb-10">
                             <div className="rounded-md p-5 bg-white">
@@ -53,20 +54,20 @@ function Home() {
                                         Danh mục sản phẩm
                                     </h5>
                                     <Link to={'/danh-muc'}
-                                          className="flex items-center justify-end gap-1 font-semibold text-md text-primary">
+                                        className="flex items-center justify-end gap-1 font-semibold text-md text-primary">
                                         Xem tất cả
-                                        <UilAngleRight size={'24px'}/>
+                                        <UilAngleRight size={'24px'} />
                                     </Link>
                                 </div>
                                 <Grid container spacing={0} className={"border-l border-b border-border-1"}>
                                     {categories?.map((category) => (
                                         <Grid item key={category.id} lg={12 / 10} md={12 / 4} xs={12 / 4}
-                                              className="min-h-full">
+                                            className="min-h-full">
                                             <Link to={`/danh-muc/${category.slug}`}
-                                                  className="min-h-[120px] p-1 border-r border-t border-border-1 text-black-2 hover:text-primary transition-all h-full flex flex-col items-center justify-center">
+                                                className="min-h-[120px] p-1 border-r border-t border-border-1 text-black-2 hover:text-primary transition-all h-full flex flex-col items-center justify-center">
                                                 <div className="flex-1 flex items-center justify-center min-h-[80px]">
-                                                    <img src={category.icon} alt={'icon category'}
-                                                         className={"max-w-[45px] max-h-[45px] min-w-[45px] min-h-[45px]"}/>
+                                                    <img src={publicApp(category.icon)} alt={'icon category'}
+                                                        className={"max-w-[45px] max-h-[45px] min-w-[45px] min-h-[45px]"} />
                                                 </div>
                                                 <p className="font-semibold text-sm text-center flex-1">
                                                     {category.title}
@@ -87,16 +88,16 @@ function Home() {
                             <Grid container spacing={2}>
                                 {items?.map((item, index) => (
                                     <Grid item lg={12 / 6} md={12 / 4} xs={12 / 2} key={index}
-                                          className="min-h-full">
-                                        <ProductCard item={item}/>
+                                        className="min-h-full">
+                                        <ProductCard item={item} />
                                     </Grid>
                                 ))}
                             </Grid>
                             <div className="flex items-center justify-center w-full mt-10">
                                 {parseInt(totalPages) &&
                                     <CustomPagination count={parseInt(totalPages)}
-                                                      page={parseInt(page)}
-                                                      handleChange={setPage}/>
+                                        page={parseInt(page)}
+                                        handleChange={setPage} />
                                 }
                             </div>
                         </div>
@@ -106,6 +107,5 @@ function Home() {
         </Helmet>
     );
 }
-
 
 export default Home;

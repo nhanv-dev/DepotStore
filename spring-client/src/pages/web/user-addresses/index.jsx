@@ -51,7 +51,7 @@ function UserAddress() {
             })
             .catch(err => {
                 toast.success('Xóa địa chỉ thất bại. Vui lòng thử lại sau.')
-                console.log(err)
+                console.warn(err)
             })
     }
     const handleSetDefault = async (payload) => {

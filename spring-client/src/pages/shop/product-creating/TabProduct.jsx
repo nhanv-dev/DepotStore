@@ -138,7 +138,6 @@ function TabProduct({handleSubmit}) {
                 if (!deal.finalPrice) deal.finalPrice = deal.price;
             }
             prev.product.deal = deal;
-            console.log({...prev})
             return {...prev}
         });
     }

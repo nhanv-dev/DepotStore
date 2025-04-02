@@ -1,9 +1,8 @@
 package com.spring.server.security.jwt;
 
-import java.util.Map;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
@@ -17,7 +16,7 @@ public class SwaggerConfig {
 				.info(new Info()
 						.title("API Documentation")
 						.version("1.0")
-						
+
 				)
 				.addSecurityItem(new SecurityRequirement().addList("Bearer Authentication")) // Áp dụng bảo mật cho tất cả API
 				.components(new io.swagger.v3.oas.models.Components()

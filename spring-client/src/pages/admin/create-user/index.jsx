@@ -19,7 +19,7 @@ function SignUp() {
                 if (res.status === 200) navigate("/dang-nhap")
             })
             .catch(err => {
-                console.log(err)
+                console.warn(err)
             })
     }
 

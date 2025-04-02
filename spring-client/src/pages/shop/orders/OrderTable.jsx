@@ -1,12 +1,12 @@
-import {Link} from "react-router-dom";
-import {formatCurrency, formatLongDate, formatMediumDate} from "../../../util/format";
-import {UilArrowRight, UilArrowUp, UilBan, UilEye, UilMinus, UilPlus, UilSearch} from "@iconscout/react-unicons";
+import { UilArrowRight, UilArrowUp, UilBan, UilMinus, UilPlus } from "@iconscout/react-unicons";
+import { Pagination } from "@mui/material";
 import TablePagination from "@mui/material/TablePagination";
-import React, {useState} from "react";
-import {Pagination} from "@mui/material";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ImageNotFound from "../../../assets/images/image-not-found.jpg";
-import StatusStepper from "../order/StatusStepper";
+import { formatCurrency, formatMediumDate } from "../../../util/format";
 import StatusBadge from "../order/StatusBadge";
+import StatusStepper from "../order/StatusStepper";
 
 const headers = [
     {

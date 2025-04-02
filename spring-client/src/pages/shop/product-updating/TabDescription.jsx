@@ -1,9 +1,9 @@
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Editor from "./Editor";
-import {PayloadContext} from "./index";
+import { PayloadContext } from "./index";
 
 function TabDescription() {
-    const {payload, setPayload} = useContext(PayloadContext);
+    const { payload, setPayload } = useContext(PayloadContext);
     const [description, setDescription] = useState('');
     const [shortDescription, setShortDescription] = useState('');
 
@@ -13,6 +13,7 @@ function TabDescription() {
             prev.product.shortDescription = shortDescription;
             return prev;
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [shortDescription])
 
     useEffect(() => {
@@ -21,12 +22,14 @@ function TabDescription() {
             prev.product.description = description;
             return prev;
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [description])
 
     useEffect(() => {
         if (!payload.product) return;
         setDescription(payload.product?.description || '');
         setShortDescription(payload.product?.shortDescription || '');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -34,13 +37,13 @@ function TabDescription() {
             <div className="w-5/12">
                 <div className="h-full rounded-md bg-white p-5 shadow-md">
                     <p className="mb-2 text-md font-semibold">Mô tả sản phẩm</p>
-                    <Editor value={shortDescription} setValue={setShortDescription}/>
+                    <Editor value={shortDescription} setValue={setShortDescription} />
                 </div>
             </div>
             <div className="flex-1">
                 <div className="h-full rounded-md bg-white p-5 shadow-md">
                     <p className="mb-2 text-md font-semibold">Chi tiết sản phẩm</p>
-                    <Editor value={description} setValue={setDescription}/>
+                    <Editor value={description} setValue={setDescription} />
                 </div>
             </div>
         </div>

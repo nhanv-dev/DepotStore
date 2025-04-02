@@ -18,7 +18,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Table(name = "variant")
-@SQLDelete(sql = "UPDATE variant SET is_deleted = true WHERE id=?")
+@SQLDelete(sql = "UPDATE variant SET is_deleted = 1 WHERE id=?")
 public class ProductVariant extends BaseEntity implements Serializable {
     @Column(nullable = false)
     private String attributeHash;

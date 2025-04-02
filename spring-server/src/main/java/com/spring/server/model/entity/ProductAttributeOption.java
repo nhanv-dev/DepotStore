@@ -21,7 +21,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "attribute_option")
-@SQLDelete(sql = "UPDATE attribute_option SET is_deleted = true WHERE id=?")
+@SQLDelete(sql = "UPDATE attribute_option SET is_deleted = 1 WHERE id=?")
 public class ProductAttributeOption extends BaseEntity implements Serializable {
     @Column(nullable = false)
     private String name, value;

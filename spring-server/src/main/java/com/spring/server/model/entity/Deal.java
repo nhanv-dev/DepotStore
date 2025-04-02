@@ -18,7 +18,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "deal")
-@SQLDelete(sql = "UPDATE deal SET is_deleted = true WHERE id=?")
+@SQLDelete(sql = "UPDATE deal SET is_deleted = 1 WHERE id=?")
 public class Deal extends BaseEntity implements Serializable {
     @Column(columnDefinition = "decimal(15,2)", nullable = false)
     private double price;

@@ -1,8 +1,7 @@
 package com.spring.server.security;
 
-import com.spring.server.security.jwt.JwtAuthenticationEntryPoint;
-import com.spring.server.security.jwt.JwtAuthenticationFilter;
-import com.spring.server.security.services.UserDetailsServiceImpl;
+import static org.springframework.security.config.Customizer.withDefaults;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +19,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.spring.server.security.jwt.JwtAuthenticationEntryPoint;
+import com.spring.server.security.jwt.JwtAuthenticationFilter;
+import com.spring.server.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableMethodSecurity
@@ -60,21 +63,25 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeHttpRequests()
-                .requestMatchers("/auth/login", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                .requestMatchers("/api/auth/**").permitAll()
-                .requestMatchers("/api/products/**").permitAll()
-                .requestMatchers("/api/categories/**").permitAll()
-                .requestMatchers("/api/search/**").permitAll()
-                .requestMatchers("/api/users/**").permitAll()
-                .requestMatchers("/api/shops/**").permitAll()
-                .requestMatchers("/api/order-status/**").permitAll()
-                .anyRequest().authenticated();
+        http.cors(withDefaults()).csrf(csrf -> csrf.disable())
+                .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(requests -> requests
+                        // Cho phép truy cập vào các đường dẫn tài nguyên tĩnh mà không cần xác thực
+                        .requestMatchers("/static/**", "/public/**", "/favicon.ico").permitAll()
+
+                        // Các đường dẫn cần xác thực
+                        .requestMatchers("/auth/login", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/products/**").permitAll()
+                        .requestMatchers("/api/categories/**").permitAll()
+                        .requestMatchers("/api/search/**").permitAll()
+                        .requestMatchers("/api/users/**").permitAll()
+                        .requestMatchers("/api/shops/**").permitAll()
+                        .requestMatchers("/api/order-status/**").permitAll()
+                        .anyRequest().authenticated());
         http.authenticationProvider(authenticationProvider());
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-        http.exceptionHandling().authenticationEntryPoint(unauthorizedHandler);
+        http.exceptionHandling(handling -> handling.authenticationEntryPoint(unauthorizedHandler));
 
         return http.build();
     }

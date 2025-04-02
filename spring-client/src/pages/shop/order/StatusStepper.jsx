@@ -1,4 +1,6 @@
-import {useCallback, useEffect, useState} from "react";
+import { Step, StepContent, StepLabel, Stepper } from "@mui/material";
+import { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import {
     ORDER_CANCELLED,
     ORDER_COMPLETED,
@@ -6,13 +8,11 @@ import {
     ORDER_PENDING,
     ORDER_SHIPPING
 } from "../../../constant/StatusOrder";
-import {Step, StepContent, StepLabel, Stepper} from "@mui/material";
-import {formatLongDate} from "../../../util/format";
-import {toast} from "react-hot-toast";
 import orderService from "../../../service/OrderService";
+import { formatLongDate } from "../../../util/format";
 
 
-const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
+const StatusStepper = ({ order, orderStatus, setOrder, setOrders }) => {
     const [list, setList] = useState([]);
     const [isCancelled, setIsCancelled] = useState(null);
     const [cancelledOrder, setCancelledOrder] = useState(null);
@@ -25,14 +25,15 @@ const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
     useEffect(() => {
         const status = getHistoryStatus(ORDER_CANCELLED);
         setIsCancelled(status);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [order])
 
     useEffect(() => {
         let status = null;
         order.statusHistory.forEach(item => {
-            if (!status) return status = {...item};
+            if (!status) return status = { ...item };
             if (item.orderStatus.status !== ORDER_CANCELLED && item.id > status.id) {
-                status = {...item};
+                status = { ...item };
             }
         })
         setLastStatusBeforeCancel(status);
@@ -40,7 +41,7 @@ const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
 
     useEffect(() => {
         if (!isCancelled || !order) return;
-        orderService.getCancelledOrder({orderId: order.id})
+        orderService.getCancelledOrder({ orderId: order.id })
             .then(res => {
                 setCancelledOrder(res.data)
             })
@@ -54,13 +55,13 @@ const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
             toast.error('Không thể thay đổi trạng thái đơn hàng này.')
             return;
         }
-        orderService.changeStatusOrder({status, orderId})
+        orderService.changeStatusOrder({ status, orderId })
             .then(res => {
                 if (typeof setOrders === 'function') {
                     setOrders(prev => {
                         const list = prev.map(order => {
-                            if (order.id !== res.data.id) return {...order};
-                            return {...res.data}
+                            if (order.id !== res.data.id) return { ...order };
+                            return { ...res.data }
                         })
                         return [...list]
                     })
@@ -118,7 +119,7 @@ const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
 
                 return (
                     <Step key={status.id} expanded={!!history} active={!!history}
-                          completed={!!isCompleted || !!isCompletedNext}>
+                        completed={!!isCompleted || !!isCompletedNext}>
                         <StepLabel>
                             <div className="font-semibold text-md">
                                 {status.title}
@@ -131,13 +132,13 @@ const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
                             {history &&
                                 <p className="font-semibold text-sm text-black-2 mb-2">
                                     {status.labelCreatedAt} <span className="text-primary font-semibold">
-                                         {formatLongDate(history.createdAt)}
+                                        {formatLongDate(history.createdAt)}
                                     </span>
                                 </p>
                             }
                             {(!isCompleted && !isCompletedNext && !isCancelled) &&
                                 <button onClick={() => handleNext(list[i + 1].status, order.id)}
-                                        className="min-w-max bg-primary-bg text-primary rounded-md outline-none px-3 py-2 font-semibold text-sm">
+                                    className="min-w-max bg-primary-bg text-primary rounded-md outline-none px-3 py-2 font-semibold text-sm">
                                     {status.labelConfirm}
                                 </button>
                             }
@@ -153,8 +154,8 @@ const StatusStepper = ({order, orderStatus, setOrder, setOrders}) => {
                                     }
                                     <p className="font-semibold text-sm">
                                         {isCancelled.orderStatus.labelCreatedAt} <span
-                                        className="text-danger font-semibold">
-                                         {formatLongDate(isCancelled.createdAt)}
+                                            className="text-danger font-semibold">
+                                            {formatLongDate(isCancelled.createdAt)}
                                         </span>
                                     </p>
                                 </div>

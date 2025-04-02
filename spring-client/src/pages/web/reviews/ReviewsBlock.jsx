@@ -5,7 +5,7 @@ import * as SolidIcon from "@iconscout/react-unicons-solid";
 import {Link} from "react-router-dom";
 
 function ReviewsBlock({review}) {
-    console.log(review)
+   
     return (
         <div className="flex border-t-[1px] py-5 border-[#f2f2f2]">
             <div className="basis-3/12">

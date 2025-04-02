@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from "../../../components/common/helmet";
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../../assets/images/logo.png";
 import * as Icon from '@iconscout/react-unicons'
-import {UilAt, UilHistory, UilLocationPoint, UilPhone, UilStore} from '@iconscout/react-unicons'
-import {useSelector} from "react-redux";
+import { UilAt, UilHistory, UilLocationPoint, UilPhone, UilStore } from '@iconscout/react-unicons'
+import { useSelector } from "react-redux";
 import Modal from "../user-address-creating/Modal";
 import axios from "axios";
-import {protectedRequest} from "../../../util/request-method";
+import { protectedRequest } from "../../../util/request-method";
 import ToastCustom from "../../../components/common/toast-custom";
-import {toast} from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 function SalesRegister() {
-    const {user, shop} = useSelector(state => state);
+    const { user } = useSelector(state => state);
     const navigate = useNavigate();
     const [shopName, setShopName] = useState("");
     const [shopEmail, setShopEmail] = useState("");
@@ -56,14 +56,14 @@ function SalesRegister() {
                 setSalesRegister(res.data)
             })
             .catch(err => {
-                console.log(err)
+                console.warn(err)
                 toast.error('Đăng ký thất bại. Vui lòng thử lại')
             })
     }
 
     return (
         <Helmet title="Depot - Đăng ký bán hàng">
-            <ToastCustom/>
+            <ToastCustom />
             <div className="relative">
                 <div className="container max-w-[1200px] pt-[60px] pb-[60px]">
                     <div className="flex">
@@ -73,16 +73,16 @@ function SalesRegister() {
                                     Đăng ký bán hàng cùng
                                 </p>
                                 <Link to="/">
-                                    <img src={Logo} alt="logo" className="h-[30px]"/>
+                                    <img src={Logo} alt="logo" className="h-[30px]" />
                                 </Link>
                             </div>
                             <p className="mt-3 font-medium text-md">
                                 Tiếp cận hơn <span className="text-primary">22 triệu lượt truy cập</span> mỗi tháng!
                             </p>
                             <div className="mt-10 relative pt-[65%] z-50 rounded-md overflow-hidden w-[110%]">
-                                <img alt="thumbnail" style={{objectFit: "contain", overflow: "clip"}}
-                                     src="https://salt.tikicdn.com/cache/w680/ts/user/dc/e6/b4/fa5101071b365ee2f385fd7d208b309f.jpg"
-                                     className="absolute top-0 left-0 w-full"/>
+                                <img alt="thumbnail" style={{ objectFit: "contain", overflow: "clip" }}
+                                    src="https://salt.tikicdn.com/cache/w680/ts/user/dc/e6/b4/fa5101071b365ee2f385fd7d208b309f.jpg"
+                                    className="absolute top-0 left-0 w-full" />
                             </div>
                         </div>
                         <div className="w-1/2 relative bg-cover bg-center z-50 pl-[120px]">
@@ -95,7 +95,7 @@ function SalesRegister() {
                                             </p>
                                             {salesRegister.status === 'PENDING' &&
                                                 <p className="px-3 py-1 text-tiny font-bold text-danger bg-danger-bg rounded-full flex items-center justify-center gap-1">
-                                                    < UilHistory className={"w-[18px] h-[18px]"}/> Đang chờ xác nhận
+                                                    < UilHistory className={"w-[18px] h-[18px]"} /> Đang chờ xác nhận
                                                 </p>
                                             }
                                         </div>
@@ -109,7 +109,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilStore className="w-full h-full text-gray"/>
+                                                    <UilStore className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -127,7 +127,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilAt className="w-full h-full text-gray"/>
+                                                    <UilAt className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -145,7 +145,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilPhone className="w-full h-full text-gray"/>
+                                                    <UilPhone className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -163,7 +163,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilLocationPoint className="w-full h-full text-gray"/>
+                                                    <UilLocationPoint className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -186,7 +186,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilLocationPoint className="w-full h-full text-gray"/>
+                                                    <UilLocationPoint className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -204,7 +204,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilLocationPoint className="w-full h-full text-gray"/>
+                                                    <UilLocationPoint className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -222,7 +222,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilLocationPoint className="w-full h-full text-gray"/>
+                                                    <UilLocationPoint className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -240,7 +240,7 @@ function SalesRegister() {
                                             className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                             <div className="flex items-center gap-3 w-full">
                                                 <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                    <UilLocationPoint className="w-full h-full text-gray"/>
+                                                    <UilLocationPoint className="w-full h-full text-gray" />
                                                 </div>
                                                 <div
                                                     className="flex-1 focus:outline-none text-md font-medium text-black-1">
@@ -257,52 +257,52 @@ function SalesRegister() {
                                     <form onSubmit={handleSubmit}>
                                         <div className="mb-5">
                                             <label htmlFor="shopName"
-                                                   className="block font-semibold text-tiny text-black-1 mb-2">
+                                                className="block font-semibold text-tiny text-black-1 mb-2">
                                                 Tên cửa hàng / thương hiệu
                                             </label>
                                             <div
                                                 className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                                 <div className="flex items-center gap-3 w-full">
                                                     <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                        <UilStore className="w-full h-full text-gray"/>
+                                                        <UilStore className="w-full h-full text-gray" />
                                                     </div>
                                                     <input id="shopName" type="text" value={shopName}
-                                                           onChange={(e) => setShopName(e.target.value)}
-                                                           className="flex-1 focus:outline-none text-md font-medium text-black-1"/>
+                                                        onChange={(e) => setShopName(e.target.value)}
+                                                        className="flex-1 focus:outline-none text-md font-medium text-black-1" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="mb-5">
                                             <label htmlFor="shopEmail"
-                                                   className="block font-semibold text-tiny text-black-1 mb-2">
+                                                className="block font-semibold text-tiny text-black-1 mb-2">
                                                 Địa chỉ email (dành cho cửa hàng)
                                             </label>
                                             <div
                                                 className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                                 <div className="flex items-center gap-3 w-full">
                                                     <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                        <UilAt className="w-full h-full text-gray"/>
+                                                        <UilAt className="w-full h-full text-gray" />
                                                     </div>
                                                     <input id="shopEmail" type="email" value={shopEmail}
-                                                           onChange={(e) => setShopEmail(e.target.value)}
-                                                           className="flex-1 focus:outline-none text-md font-medium text-black-1"/>
+                                                        onChange={(e) => setShopEmail(e.target.value)}
+                                                        className="flex-1 focus:outline-none text-md font-medium text-black-1" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="mb-5">
                                             <label htmlFor="shopPhone"
-                                                   className="block font-semibold text-tiny text-black-1 mb-2">
+                                                className="block font-semibold text-tiny text-black-1 mb-2">
                                                 Số điện thoại
                                             </label>
                                             <div
                                                 className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                                                 <div className="flex items-center gap-3 w-full">
                                                     <div className="flex items-center justify-center w-[20px] h-[20px]">
-                                                        <UilPhone className="w-full h-full text-gray"/>
+                                                        <UilPhone className="w-full h-full text-gray" />
                                                     </div>
                                                     <input id="shopPhone" type="number" value={shopPhone}
-                                                           onChange={(e) => setShopPhone(e.target.value)}
-                                                           className="flex-1 focus:outline-none text-md font-medium text-black-1"/>
+                                                        onChange={(e) => setShopPhone(e.target.value)}
+                                                        className="flex-1 focus:outline-none text-md font-medium text-black-1" />
                                                 </div>
                                             </div>
                                         </div>
@@ -315,7 +315,7 @@ function SalesRegister() {
                                         </div>
                                         <div className="w-full">
                                             <button type="submit"
-                                                    className="w-full bg-primary h-[40px] rounded-md text-tiny font-medium text-white">
+                                                className="w-full bg-primary h-[40px] rounded-md text-tiny font-medium text-white">
                                                 Đăng ký ngay
                                             </button>
                                         </div>
@@ -325,14 +325,14 @@ function SalesRegister() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#F5F5FA] absolute right-0 top-0 bottom-0 w-1/2"/>
+                <div className="bg-[#F5F5FA] absolute right-0 top-0 bottom-0 w-1/2" />
             </div>
             <div className="container max-w-[1200px] pt-10 pb-[100px]">
                 <div className="flex flex-wrap gap-10 justify-between">
                     <div className="flex-1">
                         <div className="mb-5 w-[120px]">
                             <img src="https://salt.tikicdn.com/ts/user/fa/31/98/4274d22438e2359f0ff7de1afe2fcf5a.png"
-                                 alt="thumbnail" className="w-full"/>
+                                alt="thumbnail" className="w-full" />
                         </div>
                         <h5 className="font-semibold text-2xl mb-5">
                             Sàn thương mại điện tử được tin tưởng nhất Việt Nam
@@ -346,7 +346,7 @@ function SalesRegister() {
                     <div className="flex-1">
                         <div className="mb-5 w-[120px]">
                             <img src="https://salt.tikicdn.com/ts/user/77/10/04/4c528effdbb6f98b15a1536f43a3cf27.png"
-                                 alt="thumbnail" className="w-full"/>
+                                alt="thumbnail" className="w-full" />
                         </div>
                         <h5 className="font-semibold text-2xl mb-5">
                             Chi phí bán hàng cạnh tranh
@@ -361,7 +361,7 @@ function SalesRegister() {
                     <div className="flex-1">
                         <div className="mb-5 w-[120px]">
                             <img src="https://salt.tikicdn.com/ts/user/b1/06/31/058c5bd5233f3c5558424ba3e371f558.png"
-                                 alt="thumbnail" className="w-full"/>
+                                alt="thumbnail" className="w-full" />
                         </div>
                         <h5 className="font-semibold text-2xl mb-5">
                             Dịch vụ TikiNow 2h
@@ -378,7 +378,7 @@ function SalesRegister() {
         ;
 }
 
-const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addressDetail, setAddressDetail}) => {
+const Address = ({ handleWarehouse, handleCity, handleDistrict, handleWard, addressDetail, setAddressDetail }) => {
     const [warehouse, setWarehouse] = useState([]);
     const [city, setCity] = useState([]);
     const [district, setDistrict] = useState([]);
@@ -387,10 +387,10 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
     const [openCity, setOpenCity] = useState(false);
     const [openDistrict, setOpenDistrict] = useState(false);
     const [openWard, setOpenWard] = useState(false);
-    const [selectWarehouse, setSelectWarehouse] = useState({id: null, name: ""});
-    const [selectCity, setSelectCity] = useState({id: null, name: ""});
-    const [selectDistrict, setSelectDistrict] = useState({id: null, name: ""});
-    const [selectWard, setSelectWard] = useState({id: null, name: ""});
+    const [selectWarehouse, setSelectWarehouse] = useState({ id: null, name: "" });
+    const [selectCity, setSelectCity] = useState({ id: null, name: "" });
+    const [selectDistrict, setSelectDistrict] = useState({ id: null, name: "" });
+    const [selectWard, setSelectWard] = useState({ id: null, name: "" });
 
     useEffect(() => {
         axios.get('https://provinces.open-api.vn/api/?depth=1')
@@ -406,7 +406,7 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
     }, []);
     useEffect(() => {
         setDistrict([])
-        setSelectDistrict({name: "", id: null})
+        setSelectDistrict({ name: "", id: null })
         if (!selectCity.id) return;
         axios.get(`https://provinces.open-api.vn/api/p/${selectCity.id}?depth=2`)
             .then((res) => {
@@ -419,7 +419,7 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
     }, [selectCity]);
     useEffect(() => {
         setWards([])
-        setSelectWard({name: "", id: null})
+        setSelectWard({ name: "", id: null })
         if (!selectDistrict.id) return;
         axios.get(`https://provinces.open-api.vn/api/d/${selectDistrict.id}?depth=2`)
             .then((res) => {
@@ -430,17 +430,25 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
                 }))
             })
     }, [selectCity, selectDistrict])
+
     useEffect(() => {
         handleCity(selectCity)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectCity])
+
     useEffect(() => {
         handleDistrict(selectDistrict)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectDistrict])
+
     useEffect(() => {
         handleWard(selectWard)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectWard])
+
     useEffect(() => {
         handleWarehouse(selectWarehouse)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectWarehouse])
 
     return (
@@ -451,14 +459,14 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
                 </label>
                 <div className="w-full relative">
                     <button onClick={() => setOpenWarehouse(true)} type="button"
-                            className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
+                        className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
                         <p className="flex-1 text-black-1 font-medium text-md text-left w-full outline-none">
                             {selectWarehouse.name || 'Chọn khu vực kho hàng'}
                         </p>
-                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]"/>
+                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]" />
                     </button>
                     <Modal list={warehouse} show={openWarehouse} setShow={setOpenWarehouse}
-                           select={setSelectWarehouse}/>
+                        select={setSelectWarehouse} />
                 </div>
             </div>
             <div className="mb-5">
@@ -472,13 +480,13 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
                 </label>
                 <div className="w-full relative">
                     <button onClick={() => setOpenCity(true)} type="button"
-                            className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
+                        className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
                         <p className="flex-1 text-black-1 font-medium text-md text-left w-full outline-none">
                             {selectCity.name || 'Chọn tỉnh thành'}
                         </p>
-                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]"/>
+                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]" />
                     </button>
-                    <Modal list={city} show={openCity} setShow={setOpenCity} select={setSelectCity}/>
+                    <Modal list={city} show={openCity} setShow={setOpenCity} select={setSelectCity} />
                 </div>
             </div>
             <div className="mb-5">
@@ -487,14 +495,14 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
                 </label>
                 <div className="w-full relative">
                     <button onClick={() => setOpenDistrict(true)} type="button"
-                            disabled={district.length === 0}
-                            className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
+                        disabled={district.length === 0}
+                        className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
                         <p className="flex-1 text-black-1 font-medium text-md text-left w-full outline-none">
                             {selectDistrict.name || 'Chọn quận/huyện'}
                         </p>
-                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]"/>
+                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]" />
                     </button>
-                    <Modal list={district} show={openDistrict} setShow={setOpenDistrict} select={setSelectDistrict}/>
+                    <Modal list={district} show={openDistrict} setShow={setOpenDistrict} select={setSelectDistrict} />
                 </div>
             </div>
             <div className="mb-5">
@@ -503,31 +511,31 @@ const Address = ({handleWarehouse, handleCity, handleDistrict, handleWard, addre
                 </label>
                 <div className="w-full relative">
                     <button onClick={() => setOpenWard(true)} type="button" disabled={wards.length === 0}
-                            className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
+                        className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md w-full shadow-md">
                         <p className="flex-1 text-black-1 font-medium text-md text-left w-full outline-none">
                             {selectWard.name || 'Chọn phường/xã'}
                         </p>
-                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]"/>
+                        <Icon.UilAngleDown className="w-[18px] h-[18px] min-w-[18px] min-h-[18px]" />
                     </button>
-                    <Modal list={wards} show={openWard} setShow={setOpenWard} select={setSelectWard}/>
+                    <Modal list={wards} show={openWard} setShow={setOpenWard} select={setSelectWard} />
                 </div>
             </div>
             <div className="mb-5">
                 <label htmlFor="shopPhone"
-                       className="block font-semibold text-tiny text-black-1 mb-2">
+                    className="block font-semibold text-tiny text-black-1 mb-2">
                     Địa chỉ chi tiết
                 </label>
                 <div
                     className="bg-white flex items-center px-3 rounded-md border border-border h-[40px] w-full shadow-md">
                     <div className="flex items-center gap-3 w-full">
                         <div className="flex items-center justify-center w-[20px] h-[20px]">
-                            <UilLocationPoint className="w-full h-full text-gray"/>
+                            <UilLocationPoint className="w-full h-full text-gray" />
                         </div>
                         <input id="shopPhone" type="text" value={addressDetail}
-                               onChange={(e) => {
-                                   setAddressDetail(e.target.value)
-                               }}
-                               className="flex-1 focus:outline-none text-md font-medium text-black-1"/>
+                            onChange={(e) => {
+                                setAddressDetail(e.target.value)
+                            }}
+                            className="flex-1 focus:outline-none text-md font-medium text-black-1" />
                     </div>
                 </div>
             </div>

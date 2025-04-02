@@ -1,10 +1,10 @@
-import React, {useEffect, useRef, useState} from "react";
-import {getDownloadURL, ref, uploadBytes} from "@firebase/storage";
-import {storage} from "../../../service/FirebaseService";
+import React, { useEffect, useRef, useState } from "react";
+import { getDownloadURL, ref, uploadBytes } from "@firebase/storage";
+import { storage } from "../../../service/FirebaseService";
 import * as Icon from "@iconscout/react-unicons";
 import Tooltip from "@mui/material/Tooltip";
 
-function UploadImages({images, setImages}) {
+function UploadImages({ images, setImages }) {
     const imageRef = useRef(null);
     const formRef = useRef(null);
     const [active, setActive] = useState(0);
@@ -19,6 +19,7 @@ function UploadImages({images, setImages}) {
             setUploadedImage([]);
             formRef.current.reset();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [uploadedImage])
 
     const scroll = (scrollOffset) => {
@@ -27,11 +28,11 @@ function UploadImages({images, setImages}) {
     const handleUploadImage = async (e) => {
         e.preventDefault();
         await Promise.all(
-            files.map(file => {
+            files.forEach(file => {
                 const imageRef = ref(storage, `/files/${file.name}`)
                 uploadBytes(imageRef, file, 'data_url').then(async () => {
                     const downloadedURL = await getDownloadURL(imageRef);
-                    setUploadedImage(prev => [...prev, {url: downloadedURL}]);
+                    setUploadedImage(prev => [...prev, { url: downloadedURL }]);
                 })
             })
         )
@@ -39,7 +40,7 @@ function UploadImages({images, setImages}) {
     const handleReadImage = async (e) => {
         const uploadedImages = Array.from(e.target.files).map(file => {
             const objectUrl = URL.createObjectURL(file)
-            return {url: objectUrl, isPreview: true, file}
+            return { url: objectUrl, isPreview: true, file }
         })
         setImages([...images, ...uploadedImages]);
         setFiles(prev => [...prev, ...e.target.files])
@@ -48,7 +49,7 @@ function UploadImages({images, setImages}) {
         e.preventDefault();
         if (!e.target.image.value) return;
         const url = e.target.image.value;
-        setImages([{url}, ...images]);
+        setImages([{ url }, ...images]);
         e.target.image.value = "";
     }
     const deleteImage = () => {
@@ -65,24 +66,24 @@ function UploadImages({images, setImages}) {
                 </h5>
                 <div className="flex items-center justify-center gap-2">
                     <form onSubmit={handleUploadImageByURL}
-                          className="flex-1 flex items-center justify-start gap-2 border-2 botext-primary rounded-md px-2 py-1.5 text-primary text-sm font-medium cursor-pointer">
+                        className="flex-1 flex items-center justify-start gap-2 border-2 botext-primary rounded-md px-2 py-1.5 text-primary text-sm font-medium cursor-pointer">
                         <input type="text" id="image" name="image" placeholder="Dán đường dẫn tại đây"
-                               className="outline-none text-sm flex-1"/>
+                            className="outline-none text-sm flex-1" />
                         <button type="submit">
-                            <Icon.UilMessage className="w-[18px] h-[18px]"/>
+                            <Icon.UilMessage className="w-[18px] h-[18px]" />
                         </button>
                     </form>
                     <form onSubmit={handleUploadImage} ref={formRef}>
                         <div className="flex items-center justify-start gap-2">
                             <input type="file" id="upload-image" name="upload-image"
-                                   accept="image/png, image/jpeg, image/webp"
-                                   onChange={handleReadImage} className="hidden" multiple="multiple"/>
+                                accept="image/png, image/jpeg, image/webp"
+                                onChange={handleReadImage} className="hidden" multiple="multiple" />
                             <label htmlFor="upload-image"
-                                   className="flex items-center justify-center gap-1 border-2 botext-primary rounded-md min-w-[70px] p-1.5 text-primary text-sm font-medium cursor-pointer">
+                                className="flex items-center justify-center gap-1 border-2 botext-primary rounded-md min-w-[70px] p-1.5 text-primary text-sm font-medium cursor-pointer">
                                 Tải ảnh
                             </label>
                             <button type="submit"
-                                    className="flex items-center justify-center gap-1 border-2 botext-primary rounded-md min-w-[70px] p-1.5 text-primary text-sm font-medium cursor-pointer">
+                                className="flex items-center justify-center gap-1 border-2 botext-primary rounded-md min-w-[70px] p-1.5 text-primary text-sm font-medium cursor-pointer">
                                 Lưu ảnh
                             </button>
                         </div>
@@ -93,16 +94,16 @@ function UploadImages({images, setImages}) {
                 <div
                     className="group relative w-full h-[400px] overflow-hidden border border-border rounded-[8px] flex items-center justify-center">
                     <div
-                        style={{backgroundImage: `url(${(images && images[active]) ? images[active].url : defaultImage})`}}
-                        className="h-full bg-cover bg-center w-full rounded-[8px] relative "/>
+                        style={{ backgroundImage: `url(${(images && images[active]) ? images[active].url : defaultImage})` }}
+                        className="h-full bg-cover bg-center w-full rounded-[8px] relative " />
                     <div className="absolute right-[10px] top-[10px] z-10">
                         <button onClick={deleteImage}
-                                className="mb-2 w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
-                            <Icon.UilImageTimes className="text-primary w-[18px] h-[18px]"/>
+                            className="mb-2 w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
+                            <Icon.UilImageTimes className="text-primary w-[18px] h-[18px]" />
                         </button>
                         <button
                             className="w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
-                            <Icon.UilExpandRight className="text-primary w-[18px] h-[18px]"/>
+                            <Icon.UilExpandRight className="text-primary w-[18px] h-[18px]" />
                         </button>
                     </div>
                 </div>
@@ -111,27 +112,27 @@ function UploadImages({images, setImages}) {
                 <div className="relative flex justify-center">
                     {images.length > 4 &&
                         <button onClick={() => scroll(-100)}
-                                className="absolute left-[-16px] top-[50%] translate-y-[-50%] z-10 w-[32px] h-[32px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
-                            <Icon.UilAngleLeftB className="text-primary w-[18px] h-[18px]"/>
+                            className="absolute left-[-16px] top-[50%] translate-y-[-50%] z-10 w-[32px] h-[32px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
+                            <Icon.UilAngleLeftB className="text-primary w-[18px] h-[18px]" />
                         </button>
                     }
                     <div ref={imageRef}
-                         className="scroll-smooth w-full flex gap-[10px] items-center justify-start overflow-hidden">
+                        className="scroll-smooth w-full flex gap-[10px] items-center justify-start overflow-hidden">
                         {images?.map((image, index) => (
                             <div key={index} className="relative">
                                 <button
                                     onClick={() => setActive(index)}
-                                    style={{backgroundImage: `url(${image.url || defaultImage})`}}
+                                    style={{ backgroundImage: `url(${image.url || defaultImage})` }}
                                     className={`bg-cover bg-center overflow-hidden transition-all outline-none min-w-[80px] min-h-[80px] max-w-[80px] max-h-[80px] rounded-md border-2 ${index === active ? 'border-2 border-primary' : 'border-border'}`}>
                                 </button>
                                 {image.isPreview &&
                                     <div
                                         className="absolute top-[5px] right-[5px] z-[9999]">
                                         <Tooltip arrow followCursor
-                                                 title="Hình ảnh chưa lưu được lưu !">
+                                            title="Hình ảnh chưa lưu được lưu !">
                                             <div className="flex items-center gap-3 max-w-max">
                                                 <Icon.UilInfoCircle
-                                                    className="rounded-full text-danger bg-white w-[20px] h-[20px]"/>
+                                                    className="rounded-full text-danger bg-white w-[20px] h-[20px]" />
                                             </div>
                                         </Tooltip>
                                     </div>
@@ -141,18 +142,18 @@ function UploadImages({images, setImages}) {
                     </div>
                     {images.length > 4 &&
                         <button onClick={() => scroll(100)}
-                                className="absolute right-[-16px] top-[50%] translate-y-[-50%] z-10 w-[32px] h-[32px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
-                            <Icon.UilAngleRightB className="text-primary w-[18px] h-[18px]"/>
+                            className="absolute right-[-16px] top-[50%] translate-y-[-50%] z-10 w-[32px] h-[32px] flex items-center justify-center rounded-full bg-[#D8EAFF]">
+                            <Icon.UilAngleRightB className="text-primary w-[18px] h-[18px]" />
                         </button>
                     }
                 </div>
             ) : (
                 <div className="relative flex justify-center">
                     <div ref={imageRef}
-                         className="scroll-smooth w-full flex gap-[10px] items-center justify-start overflow-hidden">
+                        className="scroll-smooth w-full flex gap-[10px] items-center justify-start overflow-hidden">
                         <div className="relative">
                             <button
-                                style={{backgroundImage: `url(${defaultImage})`}}
+                                style={{ backgroundImage: `url(${defaultImage})` }}
                                 className={`bg-cover bg-center overflow-hidden transition-all outline-none min-w-[80px] min-h-[80px] max-w-[80px] max-h-[80px] rounded-md border-2 border-primary`}>
                             </button>
                         </div>

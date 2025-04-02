@@ -1,30 +1,30 @@
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ProductAttributes from "./ProductAttributes";
 import ProductVariants from "./ProductVariants";
-import {PayloadContext} from "./index";
+import { PayloadContext } from "./index";
 import * as Icon from "@iconscout/react-unicons";
 import ModalOption from "./ModalOption";
-import {similarArray} from "../../../util/array";
+import { similarArray } from "../../../util/array";
 import toast from "react-hot-toast";
 
 function TabOption() {
-    const {payload, setPayload} = useContext(PayloadContext);
+    const { payload, setPayload } = useContext(PayloadContext);
     const [attributes, setAttributes] = useState(payload?.attributes ? [...payload?.attributes] : []);
     const [variants, setVariants] = useState(payload?.variants ? [...payload?.variants] : []);
     const [selectedVariant, setSelectedVariant] = useState(null);
 
     useEffect(() => {
-        setPayload(prev => ({...prev, attributes}))
+        setPayload(prev => ({ ...prev, attributes }))
     }, [attributes, setPayload])
 
     useEffect(() => {
-        setPayload(prev => ({...prev, variants}))
+        setPayload(prev => ({ ...prev, variants }))
     }, [variants, setPayload])
 
     return (
         <div className="w-full">
             <div className="mb-6">
-                <ProductAttributes attributes={attributes} setAttributes={setAttributes}/>
+                <ProductAttributes attributes={attributes} setAttributes={setAttributes} />
             </div>
             <div className="">
                 <div className="flex items-start gap-6">
@@ -50,7 +50,7 @@ function TabOption() {
     );
 }
 
-const Variant = ({attributes, selectedVariant, setSelectedVariant, variants, setVariants}) => {
+const Variant = ({ attributes, selectedVariant, setSelectedVariant, variants, setVariants }) => {
     const [show, setShow] = useState(false)
     const [newVariant, setNewVariant] = useState({
         attributeHash: "",
@@ -107,14 +107,14 @@ const Variant = ({attributes, selectedVariant, setSelectedVariant, variants, set
                 })
                 if (similarOptions.length > 0) {
                     toast.error('Đã tồn tại phiên bản này');
-                    return {...prev};
+                    return { ...prev };
                 }
-                return {...prev, options: [...options, value]};
+                return { ...prev, options: [...options, value] };
             })
         } else {
             setNewVariant(prev => {
                 const options = prev.options.filter(opt => opt.attributeId !== value.attributeId)
-                return {...prev, options: [...options, value]}
+                return { ...prev, options: [...options, value] }
             })
         }
     }
@@ -126,8 +126,6 @@ const Variant = ({attributes, selectedVariant, setSelectedVariant, variants, set
         if (selectedOption.length <= 0) return null;
         return selectedOption[0].name;
     }
-
-    console.log(selectedVariant)
 
     return (
         <div className="w-full max-w-full rounded-md bg-white p-5 shadow-md">
@@ -146,16 +144,16 @@ const Variant = ({attributes, selectedVariant, setSelectedVariant, variants, set
                                     <button onClick={() => {
                                         setShow(attribute.attributeId)
                                     }} type="button"
-                                            className="flex-1 flex items-center justify-between gap-3 w-full shadow-md bg-white rounded-md px-3 py-2">
+                                        className="flex-1 flex items-center justify-between gap-3 w-full shadow-md bg-white rounded-md px-3 py-2">
                                         <p className="flex-1 text-black-1 font-medium text-md text-left w-full outline-none">
                                             {showSelectedOption(attribute) || `Chọn ${attribute.name}`}
                                         </p>
-                                        <Icon.UilAngleDown className="w-[24px] h-[24px] min-w-[24px] min-h-[24px]"/>
+                                        <Icon.UilAngleDown className="w-[24px] h-[24px] min-w-[24px] min-h-[24px]" />
                                     </button>
                                     <ModalOption show={show === attribute.attributeId}
-                                                 setShow={setShow}
-                                                 list={attribute.options}
-                                                 select={handleChangeOption}/>
+                                        setShow={setShow}
+                                        list={attribute.options}
+                                        select={handleChangeOption} />
                                 </div> :
                                 <div className="font-semibold text-tiny">
                                     Chưa thêm tùy chọn
@@ -171,12 +169,12 @@ const Variant = ({attributes, selectedVariant, setSelectedVariant, variants, set
                         <>
                             <button onClick={() => {
                             }} type="button"
-                                    className="outline-none flex items-center justify-center gap-1.5 py-1.5 px-3 rounded border-2 text-red font-semibold text-sm">
-                                <Icon.UilTrashAlt className="relative top-[-.5px] w-[18px] h-[18px]"/>
+                                className="outline-none flex items-center justify-center gap-1.5 py-1.5 px-3 rounded border-2 text-red font-semibold text-sm">
+                                <Icon.UilTrashAlt className="relative top-[-.5px] w-[18px] h-[18px]" />
                                 <span className="">Xóa</span>
                             </button>
                             <button onClick={() => setSelectedVariant(null)} type="button"
-                                    className="outline-none flex items-center justify-center gap-1.5 py-1.5 px-3 rounded border-2 text-primary font-semibold text-sm">
+                                className="outline-none flex items-center justify-center gap-1.5 py-1.5 px-3 rounded border-2 text-primary font-semibold text-sm">
                                 <span className="">Hoàn tất</span>
                             </button>
                         </> :
@@ -184,8 +182,8 @@ const Variant = ({attributes, selectedVariant, setSelectedVariant, variants, set
                             <button onClick={() => {
                                 handleAddVariant(newVariant)
                             }} type="button"
-                                    className="outline-none flex items-center justify-center gap-1.5 py-1.5 px-3 rounded border-2 text-primary font-semibold text-sm">
-                                <Icon.UilSave className="relative top-[-.5px] w-[18px] h-[18px]"/>
+                                className="outline-none flex items-center justify-center gap-1.5 py-1.5 px-3 rounded border-2 text-primary font-semibold text-sm">
+                                <Icon.UilSave className="relative top-[-.5px] w-[18px] h-[18px]" />
                                 <span className="">Thêm mới</span>
                             </button>
                         </>
